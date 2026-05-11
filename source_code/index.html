@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,13 +9,21 @@
             href="css/bootstrap/bootstrap.min.css"
             class="css"
         />
-        <link rel="stylesheet" href="css/main.css" class="css" />
+        <!-- <link rel="stylesheet" href="css/main.css" class="css" /> -->
     </head>
     <body>
+        <div id="navbar"></div>
         <h1>StartApp</h1>
+        <div id="footer"></div>
         
         <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="js/load_html.js"></script>
         <script src="js/account.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>
+
+<script>
+    F_LoadHTML("compenents/navbar.html", "navbar");
+    F_LoadHTML("compenents/footer.html", "footer");
+</script>
