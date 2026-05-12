@@ -1,0 +1,11 @@
+:root {
+    --color-main-a-60: #E5E5E5;
+    --color-main-b-60: #DEDEDE;
+    --background: linear-gradient(var(--color-main-a-60), var(--color-main-b-60));
+    --color-secondary-30: #709BA3;
+    --color-c2a-a: #2571B9;
+    --color-c2a-b: #FFFFFF;
+    --color-text: #000000;
+    --color-star-not-selected: #15B400;
+    --color-star-selected: #0D6D00;
+}

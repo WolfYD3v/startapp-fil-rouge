@@ -1,6 +1,25 @@
-@import url("compenents/_index.css");
-@import url("base/_reset.css");
-@import url("layout/_footer.css");
-@import url("layout/_grid.css");
-@import url("pages/_home.css");
+/* Imports Bootstrap style files */
+@import url("bootstrap/bootstrap.min.css");
+
+/* Imports compenents style files */
+@import url("compenents/_navbar.css");
+@import url("compenents/_footer.css");
 @import url("compenents/_cards.css");
+
+/* Imports base style files */
+@import url("base/_reset.css");
+@import url("base/_colors.css");
+
+/* Imports layout style files */
+@import url("layout/_grid.css");
+
+/* Imports pages style files */
+@import url("pages/_home.css");
+
+
+
+/* Set the body up */
+body {
+    overflow: hidden;
+    box-sizing: border-box;
+}

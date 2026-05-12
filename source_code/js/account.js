@@ -1,16 +1,14 @@
-function F_RedirectTo(V_Link) {
-    window.location.replace(V_Link);
-}
-function F_Login() {
-    F_RedirectTo('http://www.w3schools.com'); // Temporary Link, Create Login Page First (TODO)
-}
-function F_SignIn() {
-    F_RedirectTo('http://www.google.com'); // Temporary Link, Create SignIn Page First (TODO)
-}
+const C_RedirectionLinks = {
+    "login": "http://www.w3schools.com", // Temporary Link, Create Login Page First (TODO)
+    "sign_in": "http://www.google.com",  // Temporary Link, Create SignIn Page First (TODO)
+};
 
 function F_CheckForAccount() {
-    var V_HaveAccount = false; // Add A Real Check Much More Later (TODO)
+    const C_HaveAccount = false; // Add A Real Check Much More Later (TODO)
+    var V_RedirectionLink = "";
 
-    if (V_HaveAccount) { F_Login(); }
-    else { F_SignIn(); }
+    if (C_HaveAccount) { V_RedirectionLink = C_RedirectionLinks["login"]; }
+    else { V_RedirectionLink = C_RedirectionLinks["sign_in"]; }
+
+    if (V_RedirectionLink != "") { window.location.replace(V_RedirectionLink); }
 }
