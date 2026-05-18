@@ -1,9 +1,14 @@
-footer {
+.footer {
     display: flex;
     flex-direction: row;
+    background-color: var(--color-secondary-30);
     width: 100%;
     height: auto;
-    background-color: green;
+    padding: 10px;
+    gap: 10px;
+    border-top: 5px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .footer-section {
@@ -12,8 +17,15 @@ footer {
     flex-direction: column;
 }
 
+.footer-section-title {
+    font-size: calc(var(--desktop-font-size) + 0.2rem);
+}
+
 @media only screen and (max-width: 480px) {
-    footer {
+    .footer {
+        padding: 5px;
         flex-direction: column;
+        border-top: 3px solid black;
     }
+    .footer-section-title { font-size: calc(var(--responsive-mobile-font-size) + 0.2rem); }
 }
