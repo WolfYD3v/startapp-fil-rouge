@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>StartApp</title>
+        <link rel="stylesheet" href="css/main.css" class="css" />
+    </head>
+    <body>
+        <div id="navbar-container"></div>
+        <div class="d-flex flex-column">
+            <h1>StartApp - Listing Page</h1>
+        </div>
+        <div id="footer-container"></div>
+        
+        <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="js/load_html.js"></script>
+    </body>
+</html>
+
+<script>
+    F_LoadHTML("compenents/navbar.html", "navbar-container");
+    F_LoadHTML("compenents/footer.html", "footer-container");
+</script>
