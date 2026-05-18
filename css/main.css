@@ -26,4 +26,5 @@ body {
     flex-direction: column;
     margin: 0px;
     gap: 10px;
+    color: var(--color-text);
 }

@@ -1,4 +1,6 @@
 .navbar {
+    display: flex;
+    flex-direction: column;
     background-color: var(--color-secondary-30);
     padding: 10px;
     width: 100%;
@@ -26,9 +28,9 @@
 .navbar-action-button {
     display: block;
     text-align: center;
-    line-height: 60px;
+    line-height: calc(var(--desktop-font-size) * 2.5);
     width: 100%;
-    height: 60px;
+    height: calc(var(--desktop-font-size) * 2.5);
     color: var(--color-text);
     text-decoration: none;
     font-size: var(--desktop-font-size);
@@ -44,11 +46,15 @@
 
 .navbar-burger-menu-popup-button {
     display: none;
-    text-align: center;
-    line-height: 45px;
-    width: 45px;
-    height: 45px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(var(--responsive-mobile-font-size) * 2.5);
+    line-height: calc(var(--responsive-mobile-font-size) * 2.5);
+    width: calc(var(--responsive-mobile-font-size) * 2.5);
+    height: calc(var(--responsive-mobile-font-size) * 2.5);
 }
+
 .navbar-burger-menu {
     display: none !important;
     height: auto;
@@ -69,12 +75,15 @@
     .navbar-action-button {
         padding-left: 10px;
         text-align: left;
-        height: 40px;
-        line-height: 40px;
+        height: calc(var(--responsive-mobile-font-size) * 2.0);
+        line-height: calc(var(--responsive-mobile-font-size) * 2.0);
         font-weight: normal;
         font-size: var(--responsive-mobile-font-size);
     }
     .navbar-desktop-actions-menu { display: none !important; }
-    .navbar-burger-menu-popup-button { display: block; }
+    .navbar-burger-menu-popup-button {
+        display: flex;
+        padding-left: 0px;
+    }
     .navbar-burger-menu { display: flex !important; }
 }
