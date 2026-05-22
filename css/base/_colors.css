@@ -1,11 +1,13 @@
 :root {
-    --color-main-a-60:           rgb(229, 229, 229);
-    --color-main-b-60:           rgb(222, 222, 222);
-    --background:                linear-gradient(to bottom, var(--color-main-a-60), var(--color-main-b-60));
-    --color-secondary-30:        rgba(112, 155, 163, 0.75);
-    --color-c2a-a:               rgb(37, 113, 185);
-    --color-c2a-b:               rgb(255, 255, 255);
-    --color-text:                rgb(0, 0, 0);
-    --color-star-not-selected:   rgb(21, 180, 0);
-    --color-star-selected:       rgb(13, 109, 0);
+    --color-main-a-60:              rgb(229, 229, 229);
+    --color-main-b-60:              rgb(187, 187, 187);
+    --color-secondary-30:           rgba(112, 155, 163, 0.75);
+    --color-c2a-a:                  rgb(37, 113, 185);
+    --color-c2a-b:                  rgb(255, 255, 255);
+    --color-text:                   rgb(0, 0, 0);
+    --color-star-not-selected:      rgb(21, 180, 0);
+    --color-star-selected:          rgb(13, 109, 0);
+    --background:                   linear-gradient(to bottom, var(--color-main-a-60), var(--color-main-b-60));
+    --compenent-gradient:           linear-gradient(to top, var(--color-secondary-30), rgba(255, 255, 255, 0) 40%);
+    --compenent-gradient-hovered:   linear-gradient(to top, var(--color-secondary-30), rgba(255, 255, 255, 0) 75%);
 }

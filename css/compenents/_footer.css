@@ -43,15 +43,6 @@
     border-radius: 15px;
 }
 
-.footer-section-link {
-    font-family: var(--text-font);
-    font-size: calc(var(--desktop-font-size) / 1.4);
-    text-decoration: solid;
-    color: var(--color-text);
-    width: fit-content;
-}
-.footer-section-link:hover { text-decoration: underline; }
-
 @media only screen and (max-width: 480px) {
     .footer {
         padding: 5px;
@@ -60,5 +51,4 @@
         gap: 25px;
     }
     .footer-section-title { font-size: calc(var(--responsive-mobile-font-size) + 0.15rem); }
-    .footer-section-link { font-size: calc(var(--responsive-mobile-font-size) / 1.3); }
 }

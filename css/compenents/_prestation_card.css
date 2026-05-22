@@ -1,0 +1,66 @@
+.prestation-card {
+    transition: all 0.75s;
+    background: var(--compenent-gradient);
+    height: 150px;
+    border-radius: 15px;
+    border-bottom: 2px solid black;
+
+    a { width: 200px; }
+}
+.prestation-card:hover {
+    height: calc(160px);
+    background: var(--color-secondary-30);
+    transition: all 0.5s;
+    .link {
+        color: var(--color-text) !important;
+        transition: color 0.5s;
+    }
+}
+
+.prestation-card-image {
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    transition: width 0.5s;
+}
+
+.prestation-card .link {
+    color: var(--color-c2a-a) !important;
+    text-decoration: underline !important;
+    font-size: calc(var(--desktop-font-size) - 0.4rem) !important;
+}
+
+.prestation-card-title {
+    font-family: var(--title-font);
+    font-size: calc(var(--desktop-font-size) + 0.5rem);
+    line-height: calc(var(--desktop-font-size) + 0.5rem);
+    font-weight: bold;
+}
+
+.prestation-card-info-text {
+    font-family: var(--text-font);
+    font-size: calc(var(--desktop-font-size) - 0.4rem);
+}
+
+@media only screen and (max-width: 765px) {
+    .prestation-card:hover { height: auto; }
+    .prestation-card-buttons { display: none !important; }
+    .prestation-card-title {
+        font-size: calc(var(--desktop-font-size) + 0.1rem);
+        line-height: calc(var(--desktop-font-size) + 0.1rem);
+    }
+    .prestation-card .link { font-size: calc(var(--desktop-font-size) - 0.45rem) !important; }
+    .prestation-card-info-text { font-size: calc(var(--desktop-font-size) - 0.45rem); }
+}
+
+@media only screen and (max-width: 480px) {
+    .prestation-card { height: auto; }
+    .prestation-card-image { display: none; }
+
+    .prestation-card .link { font-size: calc(var(--desktop-font-size) - 0.5rem) !important; }
+    .prestation-card-title {
+        font-size: var(--responsive-mobile-font-sizee);
+        line-height: var(--responsive-mobile-font-size);
+    }
+    .prestation-card-info-text { font-size: calc(var(--desktop-font-size) - 0.5rem); }
+    #prestation-card-price-info { display: none; }
+}

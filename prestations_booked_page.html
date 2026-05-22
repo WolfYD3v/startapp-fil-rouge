@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>StartApp</title>
+        <link rel="stylesheet" href="css/main.css" class="css" />
+    </head>
+    <body>
+        <main>
+            <div id="navbar-container"></div>
+            <div class="container">
+                <div class="page-prestations-booked-actions-container w-100 d-flex flex-row gap-2">
+                    <input type="button" value="create a prestation" class="button page-prestations-booked-button w-100">
+                    <input type="button" value="explore prestations" class="button page-prestations-booked-button w-100" onclick="window.location.replace('listing_page.html')">
+                </div>
+                <div id="prestations-booked-container" class="d-flex flex-column gap-2"></div>
+                <div class="page-prestations-booked-selection-container w-100 d-flex flex-row justify-content-center align-items-center gap-1">
+                    <input type="button" value="<" class="page-prestations-booked-button">
+                    <h1 id="page-counter" class="d-flex justify-content-center align-items-center m-0 page-prestations-booked-counter">1</h1>
+                    <input type="button" value=">" class="page-prestations-booked-button">
+                </div>
+            </div>
+            <div id="footer-container"></div>
+        </main>
+        
+        <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="js/load_html.js"></script>
+    </body>
+</html>
+
+<script>
+    const C_MaxPrestationCardsPerPage = 10;
+
+    F_LoadHTML("compenents/navbar.html", "navbar-container");
+    F_LoadHTML("compenents/footer.html", "footer-container");
+    for (let V_PrestationCardIDX = 0; V_PrestationCardIDX < C_MaxPrestationCardsPerPage; V_PrestationCardIDX++) {
+        F_LoadHTML("compenents/prestation_booked_card.html", "prestations-booked-container")
+    }
+</script>

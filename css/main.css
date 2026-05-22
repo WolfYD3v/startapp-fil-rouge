@@ -4,6 +4,7 @@
 /* Imports compenents style files */
 @import url("compenents/_navbar.css");
 @import url("compenents/_footer.css");
+@import url(compenents/_prestation_card.css);
 
 /* Imports base style files */
 @import url("base/_reset.css");
@@ -11,20 +12,49 @@
 @import url("base/_typography.css");
 
 /* Imports layout style files */
+@import url(layout/_link.css);
+@import url(layout/_button.css);
 
 /* Imports pages style files */
+@import url("pages/_listing_page.css");
+@import url("pages/_prestations_booked_page.css");
 
 
 
-/* Set the body up */
-body {
-    overflow-x: hidden;
+*, *::before, *::after {
     box-sizing: border-box;
+}
+
+body {
+    background: var(--background);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+main {
+    width: 100%;
     background-color: var(--background);
+    color: var(--color-text);
 
     display: flex;
     flex-direction: column;
-    margin: 0px;
+    gap: 15px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
     gap: 10px;
-    color: var(--color-text);
+    width: 100%;
+    /* On remplace les margins par du padding */
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+img {
+    border-bottom: 2px solid black;
+    border-radius: 10px;
+    object-fit: cover;
 }
