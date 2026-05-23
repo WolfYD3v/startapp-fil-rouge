@@ -42,7 +42,8 @@
 }
 
 @media only screen and (max-width: 765px) {
-    .prestation-card:hover { height: auto; }
+    .prestation-card { height: fit-content; }
+    .prestation-card:hover { height: fit-content; }
     .prestation-card-buttons { display: none !important; }
     .prestation-card-title {
         font-size: calc(var(--desktop-font-size) + 0.1rem);
@@ -53,7 +54,8 @@
 }
 
 @media only screen and (max-width: 480px) {
-    .prestation-card { height: auto; }
+    .prestation-card { height: fit-content; }
+    .prestation-card:hover { height: fit-content; }
     .prestation-card-image { display: none; }
 
     .prestation-card .link { font-size: calc(var(--desktop-font-size) - 0.5rem) !important; }

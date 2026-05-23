@@ -14,11 +14,11 @@
                     <input type="button" value="create a prestation" class="button page-prestations-booked-button w-100">
                     <input type="button" value="explore prestations" class="button page-prestations-booked-button w-100" onclick="window.location.replace('listing_page.html')">
                 </div>
-                <div id="prestations-booked-container" class="d-flex flex-column gap-2"></div>
+                <div id="prestations-container" class="d-flex flex-column gap-2"></div>
                 <div class="page-prestations-booked-selection-container w-100 d-flex flex-row justify-content-center align-items-center gap-1">
-                    <input type="button" value="<" class="page-prestations-booked-button">
-                    <h1 id="page-counter" class="d-flex justify-content-center align-items-center m-0 page-prestations-booked-counter">1</h1>
-                    <input type="button" value=">" class="page-prestations-booked-button">
+                    <input type="button" value="<" id="page-prestations-left-button" class="page-prestations-booked-button">
+                    <h1 id="page-prestations-counter" class="d-flex justify-content-center align-items-center m-0 page-prestations-booked-counter">1</h1>
+                    <input type="button" value=">" id="page-prestations-right-button" class="page-prestations-booked-button">
                 </div>
             </div>
             <div id="footer-container"></div>
@@ -35,6 +35,6 @@
     F_LoadHTML("compenents/navbar.html", "navbar-container");
     F_LoadHTML("compenents/footer.html", "footer-container");
     for (let V_PrestationCardIDX = 0; V_PrestationCardIDX < C_MaxPrestationCardsPerPage; V_PrestationCardIDX++) {
-        F_LoadHTML("compenents/prestation_booked_card.html", "prestations-booked-container")
+        F_LoadHTML("compenents/prestation_booked_card.html", "prestations-container")
     }
 </script>
