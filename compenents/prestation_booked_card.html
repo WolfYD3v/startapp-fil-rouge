@@ -1,13 +1,13 @@
-<div class="prestation-card w-100 d-flex flex-row align-items-center gap-2 p-2">
+<div onclick="window.location = 'prestation_details_page.html'" class="prestation-card w-100 d-flex flex-row align-items-center gap-2 p-2">
     <img src="assets/images/temp_website_logo.png" alt="" class="prestation-card-image">
-    <div class="w-100 h-100 d-flex flex-column align-items-begin justify-content-center">
+    <div class="w-100 h-100 d-flex flex-column align-items-begin justify-content-center pe-none">
         <h2 class="prestation-card-title m-0">Prestation Title</h2>
-        <a href="#" class="link">user name (as link)</a>
+        <a href="#" onclick="event.stopPropagation();" class="link pe-auto">user name (as link)</a>
         <div class="w-100" style="height: 10px;"></div>
         <h3 class="prestation-card-info-text m-0">Category</h3>
         <h3 id="prestation-card-status-info" class="prestation-card-info-text m-0">Status</h3>
     </div>
     <div class="prestation-card-buttons w-auto h-75 d-flex flex-column justify-content-center gap-2">
-        <a href="prestation_details.page.html" class="button" style="height: 50px !important;">details</a>
+        <a href="prestation_details_page.html" onclick="event.stopPropagation();" class="button">details</a>
     </div>
 </div>
