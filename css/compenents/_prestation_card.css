@@ -1,4 +1,5 @@
 .prestation-card {
+    cursor: default;
     display: block;
     transition: all 0.75s;
     background: var(--compenent-gradient);
@@ -6,11 +7,11 @@
     width: auto;
     border-radius: 15px;
     border-bottom: 2px solid black;
-
     a { width: 200px; }
 }
 .prestation-card:hover {
-    height: calc(160px);
+    cursor: pointer;
+    height: 175px;
     background: var(--color-secondary-30);
     transition: all 0.5s;
     .link {
@@ -43,33 +44,26 @@
     font-size: calc(var(--desktop-font-size) - 0.4rem);
 }
 
-.prestation-card-buttons .button {
-    height: 50px !important;
-}
-
-@media only screen and (max-width: 765px) {
-    .prestation-card { height: fit-content; }
-    .prestation-card:hover { height: fit-content; }
+@media (max-width: 768px) {
     .prestation-card-image { display: none; }
-    .prestation-card-buttons { display: none !important; }
-    .prestation-card-title {
-        font-size: calc(var(--desktop-font-size) + 0.1rem);
-        line-height: calc(var(--desktop-font-size) + 0.1rem);
-    }
-    .prestation-card .link { font-size: calc(var(--desktop-font-size) - 0.45rem) !important; }
-    .prestation-card-info-text { font-size: calc(var(--desktop-font-size) - 0.45rem); }
-}
-
-@media only screen and (max-width: 480px) {
-    .prestation-card { height: fit-content; }
-    .prestation-card:hover { height: fit-content; }
-    .prestation-card-image { display: none; }
-
     .prestation-card .link { font-size: calc(var(--desktop-font-size) - 0.5rem) !important; }
+    .prestation-card-info-text { font-size: calc(var(--desktop-font-size) - 0.5rem); }
     .prestation-card-title {
-        font-size: var(--responsive-mobile-font-sizee);
+        font-size: var(--desktop-font-size);
+        line-height: var(--desktop-font-size);
+    }
+}
+
+@media (max-width: 576px) {
+    .prestation-card { height: fit-content; }
+    .prestation-card:hover { height: fit-content; }
+    .prestation-card-buttons { display: none !important; }
+
+    .prestation-card .link { font-size: calc(var(--responsive-mobile-font-size) - 0.4rem) !important; }
+    .prestation-card-title {
+        font-size: var(--responsive-mobile-font-size);
         line-height: var(--responsive-mobile-font-size);
     }
-    .prestation-card-info-text { font-size: calc(var(--desktop-font-size) - 0.5rem); }
+    .prestation-card-info-text { font-size: calc(var(--responsive-mobile-font-size) - 0.4rem); }
     #prestation-card-price-info { display: none; }
 }

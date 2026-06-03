@@ -1,42 +1,28 @@
 .navbar {
-    display: flex;
-    flex-direction: column;
     background-color: var(--color-secondary-30);
-    padding: 10px;
-    width: 100%;
     border-bottom: 5px solid black;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height: 100px;
 }
 
 .navbar-responsive-separation-line {
     background: black;
-    height: 3px;
+    height: 2px;
     border-radius: 15px;
 }
 
 .navbar-logo {
-    width: 80px;
-    height: 80px;
+    object-fit: contain;
 }
 
-.navbar-desktop-actions-menu {
-    display: flex;
-    flex-direction: row;
-    width: calc(60px * 3);
-}
 .navbar-action-button {
-    display: block;
-    text-align: center;
-    line-height: calc(var(--desktop-font-size) * 2.5);
-    width: 100%;
-    height: calc(var(--desktop-font-size) * 2.5);
+    font-size: calc(var(--desktop-font-size) * 1.15);
+    aspect-ratio: 1;
+    border-radius: 15px;
+    transition: all 0.65s ease-in;
     color: var(--color-text);
     text-decoration: none;
-    font-size: var(--desktop-font-size);
-    font-weight: bold;
-    border-radius: 10px;
-    transition: all 0.65s ease-in;
 }
 .navbar-action-button:hover {
     background: var(--color-c2a-a);
@@ -44,46 +30,23 @@
     transition: all 0.0s;
 }
 
-.navbar-burger-menu-popup-button {
-    display: none;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(var(--responsive-mobile-font-size) * 2.5);
-    line-height: calc(var(--responsive-mobile-font-size) * 2.5);
-    width: calc(var(--responsive-mobile-font-size) * 2.5);
-    height: calc(var(--responsive-mobile-font-size) * 2.5);
-}
-
-.navbar-burger-menu {
-    display: none !important;
-    height: auto;
-    width: 100%;
-    padding: 5px;
-    gap: 5px;
-}
-
-@media only screen and (max-width: 480px) {
+@media (max-width: 576px) {
     .navbar {
-        padding: 0px;
         border-bottom: 3px solid black;
+        height: auto;
     }
     .navbar-logo {
-        width: 45px;
-        height: 45px;
+        width: auto !important;
+        height: 60px !important;
     }
     .navbar-action-button {
         padding-left: 10px;
         text-align: left;
-        height: calc(var(--responsive-mobile-font-size) * 2.0);
-        line-height: calc(var(--responsive-mobile-font-size) * 2.0);
+        height: calc(var(--responsive-mobile-font-size) * 1.8);
+        line-height: calc(var(--responsive-mobile-font-size) * 1.8);
         font-weight: normal;
         font-size: var(--responsive-mobile-font-size);
     }
     .navbar-desktop-actions-menu { display: none !important; }
-    .navbar-burger-menu-popup-button {
-        display: flex;
-        padding-left: 0px;
-    }
     .navbar-burger-menu { display: flex !important; }
 }

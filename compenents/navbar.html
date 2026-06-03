@@ -1,23 +1,22 @@
-<nav class="navbar">
-    <div class="w-100 d-flex flex-row justify-content-between align-items-center p-2">
-        <a href="#">
+<nav class="navbar d-flex flex-column w-100 p-sm-2 p-0">
+    <div class="w-100 h-100 d-flex flex-row justify-content-between align-items-center p-2">
+        <a href="#" class="h-100 w-auto">
             <img
-                class="navbar-logo" src="assets/images/temp_website_logo.png"
+                class="navbar-logo d-flex h-100 w-100" src="assets/images/temp_website_logo.png"
                 alt="A temporary website logo, that shows some lines of beautiful CSS code"
             >
         </a>
-        <div class="navbar-desktop-actions-menu">
-            <a href="prestations_booked_page.html" class="navbar-action-button">☰</a>
-            <a href="#" class="navbar-action-button">⩍</a>
-            <a href="#" class="navbar-action-button">P</a>
+        <div class="navbar-desktop-actions-menu d-flex flex-row gap-1 h-100 p-2">
+            <a href="prestations_booked_page.html" class="navbar-action-button d-flex align-items-center justify-content-center h-100">☰</a>
+            <a href="#" class="navbar-action-button d-flex align-items-center justify-content-center h-100">⩍</a>
+            <a href="#" class="navbar-action-button d-flex align-items-center justify-content-center h-100">P</a>
         </div>
-        <a href="#" id="navbar-burger-menu-popup-button" class="navbar-action-button navbar-burger-menu-popup-button">☰</a>
     </div>
-    <div id="navbar-burger-menu" class="navbar-burger-menu d-flex flex-column">
+    <div id="navbar-burger-menu" class="d-sm-none d-flex flex-column h-auto w-100 p-2 gap-1">
         <div class="w-100 navbar-responsive-separation-line"></div>
-        <a href="prestations_booked_page.html" class="w-100 h-100 navbar-action-button">☰ | Prestations</a>
-        <a href="#" class="w-100 h-100 navbar-action-button">⩍ | Notifications</a>
-        <a href="#" class="w-100 h-100 navbar-action-button">P | Profile</a>
+        <a href="prestations_booked_page.html" class="w-100 h-fit-content navbar-action-button">☰ | Prestations</a>
+        <a href="#" class="w-100 h-fit-content navbar-action-button">⩍ | Notifications</a>
+        <a href="#" class="w-100 h-fit-content navbar-action-button">P | Profile</a>
     </div>
 
     <script src="js/compenents/_navbar.js"></script>

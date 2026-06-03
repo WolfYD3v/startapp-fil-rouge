@@ -5,12 +5,40 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>StartApp</title>
         <link rel="stylesheet" href="css/main.css" class="css" />
+        <link rel="stylesheet" href="css/pages/_prestation_details_page.css" class="css" />
     </head>
     <body>
         <main>
             <div id="navbar-container"></div>
             <div class="container">
                 <h1>Prestation Details Page (TODO)</h1>
+                <div class="d-flex flex-row w-100 h-auto gap-2">
+                    <img src="assets/images/temp_website_logo.png" alt="" height="200px" width="200px">
+                    <div class="d-flex flex-column w-100 h-auto lh-1">
+                        <h2 class="fw-bold">Service Name</h2>
+                        <a href="#" class="link authod-link-id">Author Link</a>
+                        <h4>Category</h4>
+                    </div>
+                </div>
+                <div class="d-flex flex-row global-rating-container align-items-center justify-content-start h-auto gap-3">
+                    <div id="stars-container" class="stars-container d-flex flex-row gap-1"></div>
+                    <h4 id="rating-counter" class="as">0 / 5</h4>
+                </div>
+                <div class="d-flex flex-column w-100 h-auto gap-0">
+                    <h2 class="fw-bold text-decoration-underline m-0">Descripion:</h2>
+                    <h5 class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce euismod  eget quam eget tempus. Curabitur ultricies orci vel turpis accumsan, id  scelerisque diam eleifend. Nunc blandit fermentum volutpat. Nullam  bibendum ullamcorper lorem. Morbi facilisis nec arcu ut mollis. Nam id  volutpat lectus.</h5>
+                    <h5 class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce euismod  eget quam eget tempus. Curabitur ultricies orci vel turpis accumsan, id  scelerisque diam eleifend. Nunc blandit fermentum volutpat. Nullam  bibendum ullamcorper lorem. Morbi facilisis nec arcu ut mollis. Nam id  volutpat lectus.</h5>
+                    <h5 class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce euismod  eget quam eget tempus. Curabitur ultricies orci vel turpis accumsan, id  scelerisque diam eleifend. Nunc blandit fermentum volutpat. Nullam  bibendum ullamcorper lorem. Morbi facilisis nec arcu ut mollis. Nam id  volutpat lectus.</h5>
+                </div>
+                <div id="buttons-container" class="d-flex flex-column flex-md-row justify-content-center gap-2">
+                    <a onclick="F_Book_Cancel();" href="#" id="book-cancel-button" class="button">book</a>
+                    <a href="#" class="button">msg</a>
+                </div>
+                <div class="users-reviews-container d-flex flex-column w-100 h-auto m-1 gap-2">
+                    <div class="users-reviews-separation-line w-100"></div>
+
+                    <div id="reviews" class="d-flex flex-column w-100 h-auto gap-2"></div>
+                </div>
             </div>
             <div id="footer-container"></div>
         </main>
@@ -21,6 +49,51 @@
 </html>
 
 <script>
+    function F_TryCreateRateButton(C_PrestationBooked) {
+        const C_ButtonsContainer = document.getElementById("buttons-container");
+        if (C_PrestationBooked == true) { C_ButtonsContainer.innerHTML += '<a href="#" class="button">rate</a>'; }
+    }
+
+    function F_CreateStars(C_TotalStars) {
+        const C_MaxStars = 5;
+        const C_RatingCounter = document.getElementById("rating-counter");
+        C_RatingCounter.innerText = `${C_TotalStars} / ${C_MaxStars}`;
+
+        const C_StarsContainer = document.getElementById("stars-container");
+        for (let L_StarIter = 0; L_StarIter < C_MaxStars; L_StarIter++) {
+            if (L_StarIter <  C_TotalStars) { C_StarsContainer.innerHTML += "<h2 class='as rating-star-activated'>★</h2>"; }
+            else { C_StarsContainer.innerHTML += "<h2 class='as rating-star-not-activated'>☆</h2>"; }
+        }
+    }
+
+    function F_IsBooked() {
+        const C_URLParameters = new URL(window.location.href).searchParams;
+        const C_PrestationBooked = C_URLParameters.get("booked") == 1;
+
+        return C_PrestationBooked
+    }
+
+    function F_Init() {
+        const C_PrestationBooked = F_IsBooked();
+        const C_BookCancelButton = document.getElementById("book-cancel-button");
+        if (C_PrestationBooked == true) { C_BookCancelButton.innerText = "cancel"; }
+        else { C_BookCancelButton.innerText = "book"; }
+
+        F_TryCreateRateButton(C_PrestationBooked);
+        F_CreateStars(3);
+    }
+
+    function F_Book_Cancel() {
+        if (!F_IsBooked()) { window.location = "prestation_details_page.html?booked=1"; }
+        else { window.location = "prestation_details_page.html?booked=0"; }
+    }
+
+
+
     F_LoadHTML("compenents/navbar.html", "navbar-container");
     F_LoadHTML("compenents/footer.html", "footer-container");
+    for (let V_Loop = 0; V_Loop < 5; V_Loop++) {
+        F_LoadHTML("compenents/user_review.html", "reviews");
+    }
+    F_Init();
 </script>

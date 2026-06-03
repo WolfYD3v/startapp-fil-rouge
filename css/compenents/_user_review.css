@@ -1,0 +1,9 @@
+.user-review {
+    background: var(--color-secondary-30);
+    border-radius: 15px;
+}
+
+.user-review-user-profile-picture {
+    aspect-ratio: 1 / 1;
+    width: 50px;
+}

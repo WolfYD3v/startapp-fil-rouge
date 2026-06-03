@@ -1,27 +1,6 @@
-.page-listing-search-bar { height: 30px; }
-
-.page-listing-filters-button {
-    height: 40px;
-    width: 350px;
-    font-family: var(--text-font);
-}
-
-.page-listing-search-bar {
-    border-radius: 10px;
-    border: 2px solid black;
-    padding-left: 5px;
-    padding-right: 5px;
-    color: var(--color-text);
-    font-family: var(--text-font);
-    background: var(--color-secondary-30);
-    outline: none;
-}
-
 .page-prestations-booked-selection-container {
-    height: auto;
     background: var(--color-secondary-30);
     border-radius: 15px;
-    padding: 5px;
 }
 
 .page-prestations-booked-counter {
@@ -30,36 +9,13 @@
     background: var(--color-main-a-60);
     color: var(--color-text);
     border-radius: 15px;
-    font-size: var(--desktop-font-size);
-    font-family: var(--text-font);
 }
 
-.page-prestations-booked-button {
-    height: 50px;
+.page-prestations-booked-selection-container .button {
     width: 60px;
-    border-radius: 15px;
-    border: none !important;
-    background: var(--color-c2a-a);
-    color: var(--color-c2a-b);
-    font-size: var(--desktop-font-size);
-    font-family: var(--text-font);
 }
 
-@media only screen and (max-width: 765px) {
-    .page-prestations-booked-actions-container { flex-direction: column !important; }
-}
-
-@media only screen and (max-width: 480px) {
-    .page-prestations-booked-selection-container { padding: 3px; }
-    .page-listing-filters-button {
-        height: 45px;
-        width: 100%;
-    }
-    .page-prestations-booked-button {
-        height: 40px;
-        width: 50px;
-        font-size: var(--responsive-mobile-font-size);
-    }
+@media (max-width: 576px) {
     .page-prestations-booked-counter {
         height: 40px;
         width: 70px;

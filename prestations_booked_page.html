@@ -5,20 +5,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>StartApp</title>
         <link rel="stylesheet" href="css/main.css" class="css" />
+        <link rel="stylesheet" href="css/pages/_prestations_booked_page.css" class="css" />
     </head>
     <body>
         <main>
             <div id="navbar-container"></div>
             <div class="container">
-                <div class="page-prestations-booked-actions-container w-100 d-flex flex-row gap-2">
-                    <input type="button" value="create a prestation" class="button page-prestations-booked-button w-100">
-                    <input type="button" value="explore prestations" class="button page-prestations-booked-button w-100" onclick="window.location.replace('listing_page.html')">
+                <div class="page-prestations-booked-actions-container w-100 d-flex flex-column flex-md-row gap-2">
+                    <input type="button" value="create a prestation" class="button w-100">
+                    <input type="button" value="explore prestations" class="button w-100" onclick="window.location.replace('listing_page.html')">
                 </div>
                 <div id="prestations-container" class="d-flex flex-column gap-2"></div>
-                <div class="page-prestations-booked-selection-container w-100 d-flex flex-row justify-content-center align-items-center gap-1">
-                    <input type="button" value="<" id="page-prestations-left-button" class="page-prestations-booked-button">
-                    <h1 id="page-prestations-counter" class="d-flex justify-content-center align-items-center m-0 page-prestations-booked-counter">1</h1>
-                    <input type="button" value=">" id="page-prestations-right-button" class="page-prestations-booked-button">
+                <div class="page-prestations-booked-selection-container w-100 h-auto d-flex flex-row justify-content-center align-items-center gap-2 p-2">
+                    <input type="button" value="<" id="page-prestations-left-button" class="button">
+                    <h3 id="page-prestations-counter" class="d-flex justify-content-center align-items-center m-0 page-prestations-booked-counter">1</h3>
+                    <input type="button" value=">" id="page-prestations-right-button" class="button">
                 </div>
             </div>
             <div id="footer-container"></div>

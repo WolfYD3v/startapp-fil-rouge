@@ -1,0 +1,25 @@
+.container { gap: 15px; }
+
+.authod-link-id {
+    color: var(--color-c2a-a);
+    text-decoration: underline;
+}
+
+.as { font-size: 2rem; }
+
+.rating-star-activated {
+    color: var(--color-star-selected);
+}
+.rating-star-not-activated {
+    color: var(--color-star-not-selected);
+}
+
+.users-reviews-separation-line {
+    height: 2px;
+    border-radius: 15px;
+    background: black;
+}
+
+@media (max-width: 576px) {
+    .as { font-size: 1.5rem; }
+}

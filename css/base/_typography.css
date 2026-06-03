@@ -1,6 +1,35 @@
+html { font-size: 90%; }
+
 :root {
+    /* Bootstrap MUST use my global variable declared before */
+    --bs-root-font-size:             90%;
+
+    /* My custom font size variables */
     --desktop-font-size:             1.5rem;
     --responsive-mobile-font-size:   1.25rem;
+    
+    /* Overriding initial Bootstrap fonts */
+    --bs-font-sans-serif:            "Afacad Flux", sans-serif; 
     --title-font:                    "Alexandria", sans-serif;
-    --text-font:                     "Afacad Flux", sans-serif;
+}
+
+h1, .h1 {
+    font-family: var(--title-font) !important;
+    font-weight: bold !important;
+}
+a, h2, h3, h4, h5, h6, .a, .h2, .h3, .h4, .h5, .h6 {
+    font-family: var(--bs-font-sans-serif) !important;
+}
+
+.link {
+    font-family: var(--text-font);
+    font-size: var(--desktop-font-size);
+    text-decoration: solid;
+    color: var(--color-text);
+    width: fit-content;
+}
+.link:hover { text-decoration: underline; }
+
+@media only screen and (max-width: 576px) {
+    .link { font-size: calc(var(--responsive-mobile-font-size) / 1.3); }
 }

@@ -5,6 +5,7 @@
 @import url("compenents/_navbar.css");
 @import url("compenents/_footer.css");
 @import url(compenents/_prestation_card.css);
+@import url(compenents/_user_review.css);
 
 /* Imports base style files */
 @import url("base/_reset.css");
@@ -12,12 +13,7 @@
 @import url("base/_typography.css");
 
 /* Imports layout style files */
-@import url(layout/_link.css);
 @import url(layout/_button.css);
-
-/* Imports pages style files */
-@import url("pages/_listing_page.css");
-@import url("pages/_prestations_booked_page.css");
 
 
 
@@ -48,13 +44,12 @@ main {
     flex-direction: column;
     gap: 10px;
     width: 100%;
-    /* On remplace les margins par du padding */
     padding-left: 15px;
     padding-right: 15px;
 }
 
 img {
-    border-bottom: 2px solid black;
+    border-bottom: 3px solid black;
     border-radius: 10px;
     object-fit: cover;
 }

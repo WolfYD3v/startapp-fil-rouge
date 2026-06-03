@@ -5,20 +5,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>StartApp</title>
         <link rel="stylesheet" href="css/main.css" class="css" />
+        <link rel="stylesheet" href="css/pages/_listing_page.css" class="css" />
     </head>
     <body>
         <main>
             <div id="navbar-container"></div>
             <div class="container">
-                <div class="page-listing-searching-container w-100 d-flex flex-row gap-2">
+                <div class="page-listing-searching-container w-100 d-flex flex-column flex-md-row gap-2">
                     <input type="search" name="search-bar"  placeholder="search..." id="search-bar" class="w-100 page-listing-search-bar">
                     <input type="button" value="filters" class="button page-listing-filters-button">
                 </div>
                 <div id="prestations-container" class="d-flex flex-column gap-2"></div>
-                <div class="page-listing-selection-container w-100 d-flex flex-row justify-content-center align-items-center gap-1">
-                    <input type="button" value="<" class="page-listing-button">
-                    <h1 id="page-counter" class="d-flex justify-content-center align-items-center m-0 page-listing-counter">1</h1>
-                    <input type="button" value=">" class="page-listing-button">
+                <div class="page-listing-selection-container w-100 h-auto d-flex flex-row justify-content-center align-items-center gap-2 p-2">
+                    <input type="button" value="<" class="button">
+                    <h2 id="page-counter" class="d-flex justify-content-center align-items-center m-0 page-listing-counter">1</h2>
+                    <input type="button" value=">" class="button">
                 </div>
             </div>
             <div id="footer-container"></div>
