@@ -2,7 +2,7 @@
     cursor: default;
     display: block;
     transition: all 0.75s;
-    background: var(--compenent-gradient);
+    background: var(--color-c2a-b);
     height: 150px;
     width: auto;
     border-radius: 15px;
@@ -11,7 +11,6 @@
 }
 .prestation-card:hover {
     cursor: pointer;
-    height: 175px;
     background: var(--color-secondary-30);
     transition: all 0.5s;
     .link {
@@ -44,6 +43,10 @@
     font-size: calc(var(--desktop-font-size) - 0.4rem);
 }
 
+.prestation-card-buttons {
+    padding-right: 45px;
+}
+
 @media (max-width: 768px) {
     .prestation-card-image { display: none; }
     .prestation-card .link { font-size: calc(var(--desktop-font-size) - 0.5rem) !important; }
@@ -56,7 +59,6 @@
 
 @media (max-width: 576px) {
     .prestation-card { height: fit-content; }
-    .prestation-card:hover { height: fit-content; }
     .prestation-card-buttons { display: none !important; }
 
     .prestation-card .link { font-size: calc(var(--responsive-mobile-font-size) - 0.4rem) !important; }
