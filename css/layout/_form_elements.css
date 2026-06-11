@@ -1,0 +1,14 @@
+input {
+    border-radius: 15px;
+    padding: 5px;
+}
+
+select {
+    border-radius: 15px;
+    padding: 5px;
+}
+
+textarea {
+    border-radius: 15px;
+    padding: 5px;
+}

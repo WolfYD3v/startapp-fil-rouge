@@ -5,13 +5,68 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>StartApp</title>
         <link rel="stylesheet" href="css/main.css" class="css" />
-        <link rel="stylesheet" href="css/pages/_prestations_booked_page.css" class="css" />
+        <link rel="stylesheet" href="css/pages/_create_edit_prestation_page.css" class="css" />
     </head>
     <body>
         <main>
             <div id="navbar-container"></div>
             <div class="container">
                 <h1 class="w-100 text-center">Create/Edit Prestation Page (TODO)</h1>
+
+                <form class="d-flex flex-column w-100 h-auto gap-2" action="/prestation_details_page.html?booked=1" method="post">
+                    
+                    <!-- FORM SECTION 1 : General Informations -->
+                    <fieldset class="form-section-container d-flex flex-column h-auto w-100 gap-2 p-2">
+                        <div class="form-section-top d-flex flex-row h-auto p-2 gap-3">
+                            <button class="button">v</button>
+                            <h2 class="d-flex align-items-center h-100 text-decoration-underline">I - General Informations</h2>
+                        </div>
+                        <input type="text" placeholder="Prestation Name (75 characters max.)" maxlength="75" id="prestation-name" name="prestation-name" required />
+                        <select id="category-select" name="category-select" required>
+                            <option value="">SELCT A CATEGORY</option>
+                            <option value="Temp_Category_1">Temp_Category_1</option>
+                            <option value="Temp_Category_2">Temp_Category_2</option>
+                            <option value="Temp_Category_3">Temp_Category_3</option>
+                            <option value="Temp_Category_4">Temp_Category_4</option>
+                            <option value="Temp_Category_5">Temp_Category_5</option>
+                        </select>
+                            <div class="file-upload-zone">
+                                <input type="file" id="cover-image" name="cover-image" accept=".jpg, .jpeg, .png, .webp" style="display: none;" required />
+                                <label for="cover-image" class="prestation-cover-button" style="cursor: pointer;">
+                                    <img src="assets/images/temp_website_logo.png" alt="Select the cover image for the prestation">
+                                </label>
+                                <span>Click/Drag and drop</span>
+                            </div>
+                    </fieldset>
+
+                    <!-- FORM SECTION 2 : Desciption -->
+                    <fieldset class="form-section-container d-flex flex-column h-auto w-100 gap-2 p-2">
+                        <div class="form-section-top d-flex flex-row h-auto p-2 gap-3">
+                            <button class="button">v</button>
+                            <h2 class="d-flex align-items-center h-100 text-decoration-underline">II - Desciption</h2>
+                        </div>
+                        <textarea id="desciption-text" name="desciption-text" placeholder="Prestation Desciption (1500 characters max.)" maxlength="1500" required></textarea>
+                    </fieldset>
+
+                    <!-- FORM SECTION 3 : Date and Pricing -->
+                    <fieldset class="form-section-container d-flex flex-column h-auto w-100 gap-2 p-2">
+                        <div class="form-section-top d-flex flex-row h-auto p-2 gap-3">
+                            <button class="button">v</button>
+                            <h2 class="d-flex align-items-center h-100 text-decoration-underline">III - Date and Pricing</h2>
+                        </div>
+                        <input type="date" id="date" name="date" required>
+                        <input type="number" id="price" name="price" min="1.00" step="0.01" required>
+                    </fieldset>
+
+                    <!-- FORM SECTION 4 : Buttons -->
+                    <div class="form-section-container d-flex flex-row w-100 p-2 gap-2">
+                        <button type="button" class="button">Cancel</button>
+                        <button type="submit" class="button">Submit</button>
+                        <button type="reset" class="button">Reset</button>
+                    </div>
+                    
+                </form>
+
             </div>
             <div id="footer-container"></div>
         </main>

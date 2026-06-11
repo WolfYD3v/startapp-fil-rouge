@@ -1,0 +1,27 @@
+.form-section-container {
+    border-radius: 15px;
+    background: white;
+}
+
+.form-section-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.form-section-top .button {
+    width: auto;
+    aspect-ratio: 1;
+}
+
+.prestation-cover-button {
+    border: none;
+    background: none;
+
+    img {
+        aspect-ratio: 1 / 1;
+        height: 200px;
+    }
+}
+
+#desciption-text {
+    height: 200px;
+}
