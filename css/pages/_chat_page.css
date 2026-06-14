@@ -1,19 +1,24 @@
-.send-message-form {
-    opacity: 0.5;
-    position: fixed;
-    top: 90%;
-}
-.send-message-form:hover {
-    opacity: 1.0;
+.messages-container {
+    max-height: 650px;
+    overflow-y: auto;
+    border: 2px solid black;
+    border-radius: 15px;
+    background: white;
+
+    @media (max-width: 576px) { max-height: 400px; }
 }
 
 #message-text {
-    height: 75px;
+    height: 100px;
+
+    @media (max-width: 576px) { height: 75px; }
 }
 
 .button {
     width: 200px;
     padding: 25px !important;
+
+    @media (max-width: 576px) { width: 100%; }
 }
 
 .chat-bubble-user-image {
