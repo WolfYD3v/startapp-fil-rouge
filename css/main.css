@@ -38,6 +38,7 @@ main {
 
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
     gap: 15px;
 }
 
@@ -46,8 +47,10 @@ main {
     flex-direction: column;
     gap: 10px;
     width: 100%;
+    min-height: 100%;
     padding-left: 15px;
     padding-right: 15px;
+    flex-grow: 1;
 }
 
 img {

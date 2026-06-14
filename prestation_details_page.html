@@ -32,7 +32,7 @@
                 </div>
                 <div id="buttons-container" class="d-flex flex-column flex-md-row justify-content-center gap-2">
                     <a onclick="F_Book_Cancel();" href="#" id="book-cancel-button" class="button">book</a>
-                    <a href="#" class="button">msg</a>
+                    <a href="chat_page.html" class="button">msg</a>
                 </div>
                 <div class="users-reviews-container d-flex flex-column w-100 h-auto m-1 gap-2">
                     <div class="users-reviews-separation-line w-100"></div>
@@ -45,13 +45,14 @@
         
         <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
         <script src="js/load_html.js"></script>
+        <script src="js/get_url_arument.js"></script>
     </body>
 </html>
 
 <script>
     function F_TryCreateRateButton(C_PrestationBooked) {
         const C_ButtonsContainer = document.getElementById("buttons-container");
-        if (C_PrestationBooked == true) { C_ButtonsContainer.innerHTML += '<a href="#" class="button">rate</a>'; }
+        if (C_PrestationBooked == true) { C_ButtonsContainer.innerHTML += '<a href="rate_prestation_page.html" class="button">rate</a>'; }
     }
 
     function F_CreateStars(C_TotalStars) {
@@ -66,12 +67,7 @@
         }
     }
 
-    function F_IsBooked() {
-        const C_URLParameters = new URL(window.location.href).searchParams;
-        const C_PrestationBooked = C_URLParameters.get("booked") == 1;
-
-        return C_PrestationBooked
-    }
+    function F_IsBooked() { return F_GetURLArgument("booked") == 1 }
 
     function F_Init() {
         const C_PrestationBooked = F_IsBooked();

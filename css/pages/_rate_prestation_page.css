@@ -1,0 +1,21 @@
+#user-review-text {
+    height: 200px;
+}
+
+.button {
+    width: fit-content !important;
+    min-width: 100px;
+    padding: 25px !important;
+}
+
+.rating-star-not-activated {
+    color: var(--color-star-not-selected);
+}
+
+.separation-area {
+    height: 100px;
+}
+
+@media (max-width: 576px) {
+    .separation-area { height: 25px; }
+}

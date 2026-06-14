@@ -11,25 +11,24 @@
         <main>
             <div id="navbar-container"></div>
             <div class="container">
-                <h1 class="w-100 text-center">Create/Edit Prestation Page (TODO)</h1>
-
-                <form class="d-flex flex-column w-100 h-auto gap-2" action="/prestation_details_page.html?booked=1" method="post">
+                <form class="d-flex flex-column w-100 h-auto gap-3 gap-sm-2" action="/prestation_details_page.html?booked=1" method="post">
                     
                     <!-- FORM SECTION 1 : General Informations -->
-                    <fieldset class="form-section-container d-flex flex-column h-auto w-100 gap-2 p-2">
+                    <fieldset class="form-section-container d-flex flex-column h-auto w-100 gap-2 p-1">
                         <div class="form-section-top d-flex flex-row h-auto p-2 gap-3">
-                            <button class="button">v</button>
-                            <h2 class="d-flex align-items-center h-100 text-decoration-underline">I - General Informations</h2>
+                            <button id="form-section-1-toggle-button" type="button" class="button">v</button>
+                            <h3 class="d-flex align-items-center h-100 text-decoration-underline">I - General Informations</h3>
                         </div>
-                        <input type="text" placeholder="Prestation Name (75 characters max.)" maxlength="75" id="prestation-name" name="prestation-name" required />
-                        <select id="category-select" name="category-select" required>
-                            <option value="">SELCT A CATEGORY</option>
-                            <option value="Temp_Category_1">Temp_Category_1</option>
-                            <option value="Temp_Category_2">Temp_Category_2</option>
-                            <option value="Temp_Category_3">Temp_Category_3</option>
-                            <option value="Temp_Category_4">Temp_Category_4</option>
-                            <option value="Temp_Category_5">Temp_Category_5</option>
-                        </select>
+                        <div id="form-section-1-form" class="d-flex flex-column h-auto w-100 gap-2 p-1">
+                            <input type="text" placeholder="Prestation Name (75 characters max.)" maxlength="75" id="prestation-name" name="prestation-name" required />
+                            <select id="category-select" name="category-select" required>
+                                <option value="">SELECT A CATEGORY</option>
+                                <option value="Temp_Category_1">Temp_Category_1</option>
+                                <option value="Temp_Category_2">Temp_Category_2</option>
+                                <option value="Temp_Category_3">Temp_Category_3</option>
+                                <option value="Temp_Category_4">Temp_Category_4</option>
+                                <option value="Temp_Category_5">Temp_Category_5</option>
+                            </select>
                             <div class="file-upload-zone">
                                 <input type="file" id="cover-image" name="cover-image" accept=".jpg, .jpeg, .png, .webp" style="display: none;" required />
                                 <label for="cover-image" class="prestation-cover-button" style="cursor: pointer;">
@@ -37,32 +36,37 @@
                                 </label>
                                 <span>Click/Drag and drop</span>
                             </div>
+                        </div>
                     </fieldset>
 
                     <!-- FORM SECTION 2 : Desciption -->
-                    <fieldset class="form-section-container d-flex flex-column h-auto w-100 gap-2 p-2">
+                    <fieldset class="form-section-container d-flex flex-column h-auto w-100 gap-2 p-1">
                         <div class="form-section-top d-flex flex-row h-auto p-2 gap-3">
-                            <button class="button">v</button>
-                            <h2 class="d-flex align-items-center h-100 text-decoration-underline">II - Desciption</h2>
+                            <button id="form-section-2-toggle-button" type="button" class="button">v</button>
+                            <h3 class="d-flex align-items-center h-100 text-decoration-underline">II - Desciption</h3>
                         </div>
-                        <textarea id="desciption-text" name="desciption-text" placeholder="Prestation Desciption (1500 characters max.)" maxlength="1500" required></textarea>
+                        <div id="form-section-2-form" class="d-flex flex-column h-auto w-100 gap-2 p-1">
+                            <textarea id="desciption-text" name="desciption-text" placeholder="Prestation Desciption (1500 characters max.)" maxlength="1500" required></textarea>
+                        </div>
                     </fieldset>
 
                     <!-- FORM SECTION 3 : Date and Pricing -->
-                    <fieldset class="form-section-container d-flex flex-column h-auto w-100 gap-2 p-2">
+                    <fieldset class="form-section-container d-flex flex-column h-auto w-100 gap-2 p-1">
                         <div class="form-section-top d-flex flex-row h-auto p-2 gap-3">
-                            <button class="button">v</button>
-                            <h2 class="d-flex align-items-center h-100 text-decoration-underline">III - Date and Pricing</h2>
+                            <button id="form-section-3-toggle-button" type="button" class="button">v</button>
+                            <h3 class="d-flex align-items-center h-100 text-decoration-underline">III - Date and Pricing</h3>
                         </div>
-                        <input type="date" id="date" name="date" required>
-                        <input type="number" id="price" name="price" min="1.00" step="0.01" required>
+                        <div id="form-section-3-form" class="d-flex flex-column h-auto w-100 gap-2 p-1">
+                            <input type="date" id="date" name="date" required>
+                            <input type="number" id="price" name="price" min="1.00" step="0.01" required>
+                        </div>
                     </fieldset>
 
                     <!-- FORM SECTION 4 : Buttons -->
-                    <div class="form-section-container d-flex flex-row w-100 p-2 gap-2">
+                    <div class="form-section-container d-flex flex-column flex-sm-row w-100 p-2 gap-2">
                         <button type="button" class="button">Cancel</button>
-                        <button type="submit" class="button">Submit</button>
-                        <button type="reset" class="button">Reset</button>
+                        <button type="reset" class="button">Clear</button>
+                        <button id="submit-button" type="submit" class="button">Publish</button>
                     </div>
                     
                 </form>
@@ -73,10 +77,52 @@
         
         <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
         <script src="js/load_html.js"></script>
+        <script src="js/get_url_arument.js"></script>
     </body>
 </html>
 
 <script>
+    function F_SetFormSectionDisplay(V_FormSectionToggleButton, V_FormSection, V_Visible) {
+        if (V_Visible) { V_FormSection.style.setProperty("display", "flex", "important"); }
+        else { V_FormSection.style.setProperty("display", "none", "important"); }
+
+        if (V_Visible) { V_FormSectionToggleButton.innerText = ">" }
+        else { V_FormSectionToggleButton.innerText = "v" }
+    }
+
+    const C_FormSection1Form = document.getElementById("form-section-1-form");
+    const C_FormSection1ToggleButton = document.getElementById("form-section-1-toggle-button");
+    var V_FormSection1Visible = true
+    C_FormSection1ToggleButton.addEventListener("click", function (e) {
+        V_FormSection1Visible = !V_FormSection1Visible;
+        F_SetFormSectionDisplay(C_FormSection1ToggleButton, C_FormSection1Form, V_FormSection1Visible);
+    });
+
+    const C_FormSection2Form = document.getElementById("form-section-2-form");
+    const C_FormSection2ToggleButton = document.getElementById("form-section-2-toggle-button");
+    var V_FormSection2Visible = false
+    C_FormSection2ToggleButton.addEventListener("click", function (e) {
+        V_FormSection2Visible = !V_FormSection2Visible;
+        F_SetFormSectionDisplay(C_FormSection2ToggleButton, C_FormSection2Form, V_FormSection2Visible);
+    });
+
+    const C_FormSection3Form = document.getElementById("form-section-3-form");
+    const C_FormSection3ToggleButton = document.getElementById("form-section-3-toggle-button");
+    var V_FormSection3Visible = false
+    C_FormSection3ToggleButton.addEventListener("click", function (e) {
+        V_FormSection3Visible = !V_FormSection3Visible;
+        F_SetFormSectionDisplay(C_FormSection3ToggleButton, C_FormSection3Form, V_FormSection3Visible);
+    });
+
+    setTimeout(function (e) {
+        F_SetFormSectionDisplay(C_FormSection1ToggleButton, C_FormSection1Form, true);
+        F_SetFormSectionDisplay(C_FormSection2ToggleButton, C_FormSection2Form, false);
+        F_SetFormSectionDisplay(C_FormSection3ToggleButton, C_FormSection3Form, false);
+    }, 500)
+
+    const C_SubmitButton = document.getElementById("submit-button");
+    if (F_GetURLArgument("edit") == 1) { C_SubmitButton.innerText = "Update"; }
+
     F_LoadHTML("compenents/navbar.html", "navbar-container");
     F_LoadHTML("compenents/footer.html", "footer-container");
 </script>
