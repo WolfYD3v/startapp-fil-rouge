@@ -4,27 +4,22 @@
     border: 2px solid black;
     border-radius: 15px;
     background: white;
-
-    @media (max-width: 576px) { max-height: 400px; }
 }
 
 #message-text {
     height: 100px;
-
-    @media (max-width: 576px) { height: 75px; }
 }
 
 .button {
     width: 200px;
     padding: 25px !important;
-
-    @media (max-width: 576px) { width: 100%; }
 }
 
 .chat-bubble-user-image {
     aspect-ratio: 1 / 1;
     height: 130px;
 }
+
 .chat-bubble-other-user-image {
     aspect-ratio: 1 / 1;
     height: 110px;
@@ -35,3 +30,11 @@
     border-bottom-right-radius: 10px;
     border-bottom: 2px solid black;
 }
+
+@media (max-width: 576px) {
+    .messages-container { max-height: 400px; }
+    #message-text { height: 75px; }
+    .button { width: 100%; }
+    .chat-bubble-user-image { height: 100px; }
+    .chat-bubble-other-user-image { height: 90px; }
+ }

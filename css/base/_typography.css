@@ -23,7 +23,7 @@ a, h2, h3, h4, h5, h6, .a, .h2, .h3, .h4, .h5, .h6 {
 
 .link {
     font-family: var(--text-font);
-    font-size: var(--desktop-font-size);
+    font-size: var(--bs-font-sans-serif);
     text-decoration: solid;
     color: var(--color-text);
     width: fit-content;
