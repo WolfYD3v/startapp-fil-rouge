@@ -8,13 +8,19 @@
     </head>
     <body>
         <main>
+            <div id="navbar-container"></div>
             <div class="container">
-                <h1>Redirecting User...</h1>
+                <h1>Profile Page (TODO)</h1>
             </div>
+            <div id="footer-container"></div>
         </main>
+
+        <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="js/load_html.js"></script>
     </body>
 </html>
 
 <script>
-    window.location.replace("listing_page.html");
+    F_LoadHTML("compenents/navbar.html", "navbar-container");
+    F_LoadHTML("compenents/footer.html", "footer-container");
 </script>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>StartApp</title>
+        <link rel="stylesheet" href="css/main.css" class="css" />
+        <link rel="stylesheet" href="css/pages/_verify_account_page.css" class="css" />
+    </head>
+    <body>
+        <main class="d-flex flex-column w-100 h-100 p-sm-5 justify-content-center align-items-center">
+            <div class="d-flex flex-column w-100 h-auto p-sm-5 gap-1 justify-content-center">
+                <h2 class="text-center fw-bold w-100">Enter the code you have received</h2>
+                <form class="w-100 d-flex flex-column justify-content-center p-sm-5 gap-4" action="profile_page.html" method="get">
+                    <fieldset class="w-100 d-flex flex-row justify-content-center gap-2">
+                        <input type="text" id="verify-account_ask_1" name="verify-account_ask_1" placeholder="__" maxlength="1" required>
+                        <input type="text" id="verify-account_ask_2" name="verify-account_ask_2" placeholder="__" maxlength="1" required>
+                        <input type="text" id="verify-account_ask_3" name="verify-account_ask_3" placeholder="__" maxlength="1" required>
+                        <input type="text" id="verify-account_ask_4" name="verify-account_ask_4" placeholder="__" maxlength="1" required>
+                        <input type="text" id="verify-account_ask_5" name="verify-account_ask_5" placeholder="__" maxlength="1" required>
+                        <input type="text" id="verify-account_ask_6" name="verify-account_ask_6" placeholder="__" maxlength="1" required>
+                    </fieldset>
+                    <fieldset class="w-100 d-flex flex-column gap-1 align-items-center">
+                        <a href="#" class="link">Re-send Code</a>
+                        <button id="verify-account-button" type="submit" class="button">Validate Code</button>
+                    </fieldset>
+                </form>
+            </div>
+        </main>
+        
+        <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

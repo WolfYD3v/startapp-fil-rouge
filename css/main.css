@@ -6,6 +6,7 @@
 @import url("compenents/_footer.css");
 @import url(compenents/_prestation_card.css);
 @import url(compenents/_user_review.css);
+@import url(compenents/_notification_card.css);
 
 /* Imports base style files */
 @import url("base/_reset.css");

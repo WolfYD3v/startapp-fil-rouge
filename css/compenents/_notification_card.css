@@ -1,0 +1,9 @@
+.notification_card {
+    background: var(--color-c2a-b);
+    border-bottom: 2px solid black;
+    border-radius: 15px;
+}
+
+.separation-area {
+    height: 10px;
+}

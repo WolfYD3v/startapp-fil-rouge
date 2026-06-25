@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>StartApp</title>
+        <link rel="stylesheet" href="css/main.css" class="css" />
+    </head>
+    <body>
+        <main>
+            <div id="navbar-container"></div>
+            <div class="container">
+                <h1>Notifications Inbox Page (TODO)</h1>
+                <h2>Notifications</h2>
+                <div id="notification-cards-container" class="w-100 d-flex flex-column gap-2"></div>
+            </div>
+            <div id="footer-container"></div>
+        </main>
+
+        <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="js/load_html.js"></script>
+    </body>
+</html>
+
+<script>
+    F_LoadHTML("compenents/navbar.html", "navbar-container");
+    F_LoadHTML("compenents/footer.html", "footer-container");
+    for (let V_NotificationCardIDX = 0; V_NotificationCardIDX < 5; V_NotificationCardIDX++) {
+        F_LoadHTML("compenents/notification_card.html", "notification-cards-container")
+    }
+</script>
