@@ -30,6 +30,6 @@ a, h2, h3, h4, h5, h6, .a, .h2, .h3, .h4, .h5, .h6 {
 }
 .link:hover { text-decoration: underline; }
 
-@media only screen and (max-width: 576px) {
+@media (max-width: 576px) {
     .link { font-size: calc(var(--responsive-mobile-font-size) / 1.3); }
 }

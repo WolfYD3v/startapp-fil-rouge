@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>StartApp</title>
+        <link rel="stylesheet" href="css/main.css" class="css" />
+        <link rel="stylesheet" href="css/pages/_profile_disponibility_agenda.css" class="css" />
+    </head>
+    <body>
+        <main>
+            <div id="navbar-container"></div>
+            <div class="container">
+                <div class="d-flex flex-column flex-md-row gap-2 gap-sm-3">
+                    <img class="profile-user-image" src="assets/images/temp_website_logo.png" alt="An image.">
+                    <h2 class="w-100 fw-bold">Profile Name</h2>
+                </div>
+                <div class="all-montly-prestations-container d-flex flex-column gap-3 p-2">
+                    <div class="montly-prestations-container d-flex flex-column gap-2">
+                        <div class="montly-prestations-header d-flex flex-row gap-2">
+                            <h2 class="w-100">Month, Year</h2>
+                            <a class="button fw-bold">^</a>
+                        </div>
+                        <div id="montly-prestations-list-container" class="montly-prestations-list-container d-flex flex-column gap-1"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer-container"></div>
+        </main>
+
+        <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="js/load_html.js"></script>
+    </body>
+</html>
+
+<script>
+    F_LoadHTML("compenents/navbar.html", "navbar-container");
+    F_LoadHTML("compenents/footer.html", "footer-container");
+
+    F_LoadHTML("compenents/profile_disponibility_agenda_day_card.html", "montly-prestations-list-container");
+    F_LoadHTML("compenents/profile_disponibility_agenda_day_card.html", "montly-prestations-list-container");
+    F_LoadHTML("compenents/profile_disponibility_agenda_day_card.html", "montly-prestations-list-container");
+    F_LoadHTML("compenents/profile_disponibility_agenda_day_card.html", "montly-prestations-list-container");
+    F_LoadHTML("compenents/profile_disponibility_agenda_day_card.html", "montly-prestations-list-container");
+</script>

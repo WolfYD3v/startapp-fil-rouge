@@ -5,12 +5,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>StartApp</title>
         <link rel="stylesheet" href="css/main.css" class="css" />
+        <link rel="stylesheet" href="css/pages/_profile_page.css" class="css" />
     </head>
     <body>
         <main>
             <div id="navbar-container"></div>
             <div class="container">
-                <h1>Profile Page (TODO)</h1>
+                <div class="d-flex flex-column flex-md-row gap-2 gap-sm-3">
+                    <img class="profile-user-image" src="assets/images/temp_website_logo.png" alt="An image.">
+                    <div class="w-100 d-flex flex-column gap-1">
+                        <h2 class="fw-bold">Profile Name</h2>
+                        <h4>Information (company name, etc)</h4>
+                        <h4>Joined a {joining date}</h4>
+                    </div>
+                </div>
+                <div class="d-flex flex-column flex-md-row gap-2">
+                    <a href="chat_page.html" class="button">Message</a>
+                    <a href="profile_disponibility_agenda.html" class="button">Agenda</a>
+                    <!-- Button to remove if the user is not related to the visited profile, something like that. I think you get whay your past you wants you to do future me -->
+                    <a href="edit_profile_page.html" class="button">Edit</a>
+                </div>
+                <div id="links-container" class="w-100 d-flex flex-row gap-3 p-2 links-container scroll-section-no-scrollbar"></div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce euismod  eget quam eget tempus. Curabitur ultricies orci vel turpis accumsan, id  scelerisque diam eleifend. Nunc blandit fermentum volutpat. Nullam  bibendum ullamcorper lorem. Morbi facilisis nec arcu ut mollis. Nam id  volutpat lectus.<br />
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce euismod  eget quam eget tempus. Curabitur ultricies orci vel turpis accumsan, id  scelerisque diam eleifend. Nunc blandit fermentum volutpat. Nullam  bibendum ullamcorper lorem. Morbi facilisis nec arcu ut mollis. Nam id  volutpat lectus.<br />
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce euismod  eget quam eget tempus. Curabitur ultricies orci vel turpis accumsan, id  scelerisque diam eleifend. Nunc blandit fermentum volutpat. Nullam  bibendum ullamcorper lorem. Morbi facilisis nec arcu ut mollis. Nam id  volutpat lectus.
+                </p>
             </div>
             <div id="footer-container"></div>
         </main>
@@ -23,4 +43,19 @@
 <script>
     F_LoadHTML("compenents/navbar.html", "navbar-container");
     F_LoadHTML("compenents/footer.html", "footer-container");
+
+    F_LoadHTML("compenents/profile_link_widget.html", "links-container");
+    F_LoadHTML("compenents/profile_link_widget.html", "links-container");
+    F_LoadHTML("compenents/profile_link_widget.html", "links-container");
+    F_LoadHTML("compenents/profile_link_widget.html", "links-container");
+    F_LoadHTML("compenents/profile_link_widget.html", "links-container");
+
+    const C_LinksContainer = document.getElementById("links-container");
+    C_LinksContainer.addEventListener("wheel", (e) => {
+        if (e.deltaY !== 0) { e.preventDefault(); }
+        C_LinksContainer.scrollBy({
+            left: e.deltaY,
+            behavior: 'auto'
+        });
+    }, { passive: false });
 </script>

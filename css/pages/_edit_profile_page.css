@@ -1,0 +1,23 @@
+.profile-user-image {
+    height: 200px;
+    aspect-ratio: 1 / 1;
+}
+
+.edit-links-container {
+    background: var(--color-secondary-30);
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.links-container {
+    border-radius: 15px;
+    box-sizing: border-box;
+    flex-wrap: nowrap !important; /* Forces items onto one line */
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    overscroll-behavior-x: contain;
+}
+
+#description {
+    height: 200px;
+}

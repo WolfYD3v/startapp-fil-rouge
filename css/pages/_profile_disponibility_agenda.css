@@ -1,0 +1,9 @@
+.profile-user-image {
+    height: 200px;
+    aspect-ratio: 1 / 1;
+}
+
+.montly-prestations-header a {
+    height: 45px;
+    width: 45px;
+}

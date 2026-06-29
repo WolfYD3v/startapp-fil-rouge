@@ -13,8 +13,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    cursor: default;
 }
 .button:hover {
+    cursor: pointer;
     background: var(--color-c2a-b);
     color: black;
     border-bottom: 2px solid black !important;

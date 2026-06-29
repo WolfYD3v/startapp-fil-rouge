@@ -1,0 +1,13 @@
+.profile_disponibility_agenda_day_card {
+    background: white;
+    border-radius: 15px;
+    border-bottom: 3px solid black;
+}
+
+.profile_disponibility_agenda_day_card div:nth-child(1) {
+    width: 200px;
+}
+
+@media (max-width: 576px) {
+    .profile_disponibility_agenda_day_card div:nth-child(2) h5:nth-child(3) { display: none; }
+}

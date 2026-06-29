@@ -1,0 +1,24 @@
+.profile-link-widget {
+    background: var(--color-c2a-b);
+    min-width: 250px;
+    height: 75px;
+    border-bottom: 2px solid black;
+    border-radius: 15px;
+    flex: 0 0 auto !important;
+    cursor: default;
+}
+.profile-link-widget:hover {
+    background: var(--color-c2a-a);
+    color: var(--color-c2a-b);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.profile-link-widget-image {
+    height: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+@media (max-width: 576px) {
+    .profile-link-widget { min-width: fit-content; }
+}

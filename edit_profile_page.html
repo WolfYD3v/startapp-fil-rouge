@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>StartApp</title>
+        <link rel="stylesheet" href="css/main.css" class="css" />
+        <link rel="stylesheet" href="css/pages/_edit_profile_page.css" class="css" />
+    </head>
+    <body>
+        <main>
+            <div id="navbar-container"></div>
+            <div class="container">
+                <h1>Edit Profile Page (TODO)</h1>
+
+                <form class="d-flex flex-column gap-2" action="profile_page.html" method="get">
+                    <div class="d-flex flex-column flex-md-row gap-2 gap-sm-3">
+                        <img class="profile-user-image" src="assets/images/temp_website_logo.png" alt="An image.">
+                        <fieldset class="w-100 d-flex flex-column gap-1">
+                            <input type="text" placeholder="Profile Name (50 characters max.)" maxlength="50" id="profile-name" name="profile-name" />
+                            <input type="text" placeholder="Information (75 characters max.)" maxlength="75" id="information" name="information" />
+                        </fieldset>
+                    </div>
+
+                    <div class="w-100 edit-links-container p-2 d-flex flex-column gap-2">
+                        <div id="links-container" class="w-100 d-flex flex-row gap-2 links-container scroll-section-no-scrollbar"></div>
+                        <a class="button">+</a>
+                    </div>
+
+                    <textarea placeholder="Description (1500 characters max.)" name="description" id="description" maxlength="1500"></textarea>
+
+                    <fieldset class="d-flex flex-row gap-2">
+                        <button class="button" type="submit">Validate Changes</button>
+                        <button class="button" type="button">Cancel</button>
+                    </fieldset>
+                </form>
+            </div>
+            <div id="footer-container"></div>
+        </main>
+
+        <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="js/load_html.js"></script>
+    </body>
+</html>
+
+<script>
+    F_LoadHTML("compenents/navbar.html", "navbar-container");
+    F_LoadHTML("compenents/footer.html", "footer-container");
+
+    F_LoadHTML("compenents/profile_link_widget.html", "links-container");
+    F_LoadHTML("compenents/profile_link_widget.html", "links-container");
+    F_LoadHTML("compenents/profile_link_widget.html", "links-container");
+    F_LoadHTML("compenents/profile_link_widget.html", "links-container");
+    F_LoadHTML("compenents/profile_link_widget.html", "links-container");
+
+    const C_LinksContainer = document.getElementById("links-container");
+    C_LinksContainer.addEventListener("wheel", (e) => {
+        if (e.deltaY !== 0) { e.preventDefault(); }
+        C_LinksContainer.scrollBy({
+            left: e.deltaY,
+            behavior: 'auto'
+        });
+    }, { passive: false });
+</script>
