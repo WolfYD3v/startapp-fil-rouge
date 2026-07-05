@@ -1,14 +1,66 @@
+/*
+| ----------------------------------
+| ALL INPUT VARIANTS
+| ----------------------------------
+*/
+
+/* Normal Input */
 input {
+    border: none;
+    outline: 1px solid black;
+    background: white;
     border-radius: 15px;
     padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
+input:hover { outline: 2px solid var(--color-c2a-a); }
+input:focus { outline-color: var(--color-c2a-a) !important; }
 
+/* Date Input */
+/* input[type="date"] {
+
+} */
+
+
+
+/*
+| ----------------------------------
+| SELECT
+| ----------------------------------
+*/
 select {
+    border: none;
+    outline: 1px solid black;
+    color: black;
+    background: white;
     border-radius: 15px;
     padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+select:hover {
+    outline: 2px solid var(--color-c2a-a);
+    color: var(--color-c2a-a);
+}
+select:focus {
+    outline: 2px solid var(--color-c2a-a);
+    color: var(--color-c2a-a);
 }
 
+
+
+/*
+| ----------------------------------
+| TEXT AREA
+| ----------------------------------
+*/
 textarea {
+    border: none;
+    outline: 1px solid black;
+    background: white;
     border-radius: 15px;
-    padding: 5px;
+    padding: 10px;
 }
+textarea:hover { outline: 2px solid var(--color-c2a-a); }
+textarea:focus { outline-color: var(--color-c2a-a) !important; }

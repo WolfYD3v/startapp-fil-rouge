@@ -13,10 +13,10 @@
             <div class="container">
 
                 <div class="d-flex content w-100">
-                    <form class="d-flex flex-column gap-2 content-element" action="profile_page.html" method="get">
+                    <form class="d-flex flex-column gap-3 content-element" action="profile_page.html" method="get">
                         <div class="d-flex flex-column flex-md-row gap-2 gap-sm-3">
-                            <img class="profile-user-image" src="assets/images/temp_website_logo.png" alt="An image.">
-                            <fieldset class="w-100 d-flex flex-column gap-1">
+                            <img class="profile-user-image" src="assets/images/user_image.jpg" alt="Your user profile picture">
+                            <fieldset class="w-100 d-flex flex-column gap-2">
                                 <input type="text" placeholder="Profile Name (50 characters max.)" maxlength="50" id="profile-name" name="profile-name" />
                                 <input type="text" placeholder="Information (75 characters max.)" maxlength="75" id="information" name="information" />
                             </fieldset>
@@ -27,8 +27,8 @@
                         </div>
                         <textarea placeholder="Description (1500 characters max.)" name="description" id="description" maxlength="1500"></textarea>
                         <fieldset class="d-flex flex-row gap-2">
-                            <button class="button" type="submit">Validate Changes</button>
-                            <button class="button" type="button">Cancel</button>
+                            <button class="button" type="submit">validate changes</button>
+                            <button class="button" type="button">cancel</button>
                         </fieldset>
                     </form>
                     <form id="edit-profile-link-widget-popup" class="content-element d-flex flex-column justify-content-center align-items-center gap-2 p-4" name="edit-profile-link-widget-popup" action="edit_profile_page.html" method="get">
@@ -41,9 +41,9 @@
                             </fieldset>
                         </div>
                         <fieldset class="d-flex flex-column flex-sm-row gap-2 w-100">
-                            <button type="submit" class="button">Update</button>
-                            <button onclick="F_ToggleEditProfileLinkWidgetPopup();" type="button" class="button">Cancel</button>
-                            <button onclick="F_ToggleEditProfileLinkWidgetPopup();" type="button" class="button">Delete</button>
+                            <button type="submit" class="button">update</button>
+                            <button onclick="F_ToggleEditProfileLinkWidgetPopup();" type="button" class="button">cancel</button>
+                            <button onclick="F_ToggleEditProfileLinkWidgetPopup();" type="button" class="button">delete</button>
                         </fieldset>
                     </form>
                 </div>

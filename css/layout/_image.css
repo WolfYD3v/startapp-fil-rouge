@@ -1,0 +1,10 @@
+/*
+| ----------------------------------
+| IMAGE
+| ----------------------------------
+*/
+img {
+    border-bottom: 3px solid black;
+    border-radius: 10px;
+    object-fit: cover;
+}

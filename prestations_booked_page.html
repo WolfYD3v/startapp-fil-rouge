@@ -12,14 +12,14 @@
             <div id="navbar-container"></div>
             <div class="container">
                 <div class="page-prestations-booked-actions-container w-100 d-flex flex-column flex-md-row gap-2">
-                    <input type="button" value="create a prestation" class="button w-100" onclick="window.location.replace('create_edit_prestation_page.html?edit=0')">
-                    <input type="button" value="explore prestations" class="button w-100" onclick="window.location.replace('listing_page.html')">
+                    <a class="button w-100" href="create_edit_prestation_page.html?edit=0">create a prestation</a>
+                    <a class="button w-100" href="listing_page.html">explore prestations</a>
                 </div>
-                <div id="prestations-container" class="d-flex flex-column gap-2"></div>
+                <div id="prestations-container" class="d-flex flex-column gap-1 gap-sm-2"></div>
                 <div class="page-prestations-booked-selection-container w-100 h-auto d-flex flex-row justify-content-center align-items-center gap-2 p-2">
-                    <input type="button" value="<" id="page-prestations-left-button" class="button">
-                    <h3 id="page-prestations-counter" class="d-flex justify-content-center align-items-center m-0 page-prestations-booked-counter">1</h3>
-                    <input type="button" value=">" id="page-prestations-right-button" class="button">
+                    <a class="button"><</a>
+                    <h2 id="page-counter" class="d-flex justify-content-center align-items-center m-0 page-prestations-booked-counter">1</h2>
+                    <a class="button">></a>
                 </div>
             </div>
             <div id="footer-container"></div>

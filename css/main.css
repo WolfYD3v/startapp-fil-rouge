@@ -1,7 +1,13 @@
-/* Imports Bootstrap style files */
+/*
+| ----------------------------------
+| IMPORTED CSS FILES
+| ----------------------------------
+*/
+
+/* Bootstrap File */
 @import url("bootstrap/bootstrap.min.css");
 
-/* Imports compenents style files */
+/* Compenents Files */
 @import url("compenents/_navbar.css");
 @import url("compenents/_footer.css");
 @import url(compenents/_prestation_card.css);
@@ -10,17 +16,23 @@
 @import url(compenents/_profile_link_widget.css);
 @import url(compenents/_profile_disponibility_agenda_day_card.css);
 
-/* Imports base style files */
+/* Base Files */
 @import url("base/_reset.css");
 @import url("base/_colors.css");
 @import url("base/_typography.css");
 
-/* Imports layout style files */
+/* Layout Files */
 @import url(layout/_button.css);
 @import url(layout/_form_elements.css);
+@import url(layout/_image.css);
 
 
 
+/*
+| ----------------------------------
+| CORE GLOBAL PAGE STRUCTURE
+| ----------------------------------
+*/
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -33,7 +45,6 @@ body {
     box-sizing: border-box;
 }
 
-
 main {
     width: 100%;
     background-color: var(--background);
@@ -42,13 +53,13 @@ main {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    gap: 15px;
+    gap: 20px;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     width: 100%;
     min-height: 100%;
     padding-left: 15px;
@@ -56,14 +67,26 @@ main {
     flex-grow: 1;
 }
 
-img {
-    border-bottom: 3px solid black;
-    border-radius: 10px;
-    object-fit: cover;
-}
 
+
+/*
+| ----------------------------------
+| CLASSES TO HIDE A SCROLLBAR
+| ----------------------------------
+*/
 .scroll-section-no-scrollbar {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;  /* For IE And Edge */
+    scrollbar-width: none;  /* For Firefox */
 }
-.scroll-section-no-scrollbar::-webkit-scrollbar { display: none; }
+.scroll-section-no-scrollbar::-webkit-scrollbar { display: none; /* For Chrome */ }
+
+
+
+/*
+| ----------------------------------
+| RESPONSIVENESS
+| ----------------------------------
+*/
+@media (max-width: 576px) {
+    .container { gap: 10px; }
+}
