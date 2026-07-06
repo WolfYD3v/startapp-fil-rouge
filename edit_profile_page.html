@@ -16,34 +16,44 @@
                     <form class="d-flex flex-column gap-3 content-element" action="profile_page.html" method="get">
                         <div class="d-flex flex-column flex-md-row gap-2 gap-sm-3">
                             <img class="profile-user-image" src="assets/images/user_image.jpg" alt="Your user profile picture">
+                            <div class="w-100 form-separation-area"></div>
                             <fieldset class="w-100 d-flex flex-column gap-2">
-                                <input type="text" placeholder="Profile Name (50 characters max.)" maxlength="50" id="profile-name" name="profile-name" />
-                                <input type="text" placeholder="Information (75 characters max.)" maxlength="75" id="information" name="information" />
+                                <label for="profile-name">Change your username (50 characters max.)</label>
+                                <input type="text" maxlength="50" id="profile-name" name="profile-name" />
+                                <div class="w-100 form-separation-area"></div>
+                                <label for="information">Change your displayed information (75 characters max.)</label>
+                                <input type="text" maxlength="75" id="information" name="information" />
                             </fieldset>
                         </div>
                         <div class="w-100 edit-links-container p-2 d-flex flex-column gap-2">
                             <div id="links-container" class="w-100 d-flex flex-row gap-2 links-container scroll-section-no-scrollbar"></div>
-                            <a onclick="F_LoadHTML('compenents/profile_link_widget_bis.html', 'links-container');" class="button fw-bold">+</a>
+                            <a onclick="F_LoadHTML('compenents/profile_link_widget_bis.html', 'links-container');" class="button fw-bold" title="Add a new profile link widget to your profile, click on it to edit it">+</a>
                         </div>
-                        <textarea placeholder="Description (1500 characters max.)" name="description" id="description" maxlength="1500"></textarea>
+                        <label for="description">Tell about yourself (1500 characters max.)</label>
+                        <textarea name="description" id="description" maxlength="1500"></textarea>
                         <fieldset class="d-flex flex-row gap-2">
-                            <button class="button" type="submit">validate changes</button>
-                            <button class="button" type="button">cancel</button>
+                            <button class="button" type="submit" title="Validates the modifications made on your profile, and update the informations">validate changes</button>
+                            <button class="button" type="button" title="Cancel the modifications made on your profile, updating nothing">cancel</button>
                         </fieldset>
                     </form>
                     <form id="edit-profile-link-widget-popup" class="content-element d-flex flex-column justify-content-center align-items-center gap-2 p-4" name="edit-profile-link-widget-popup" action="edit_profile_page.html" method="get">
                         <div class="d-flex flex-column flex-sm-row gap-3 w-100">
                             <img src="assets/images/temp_website_logo.png" alt="eee" width="150" height="150">
                             <fieldset class="d-flex flex-column gap-2 w-100">
-                                <input type="text" id="profile-link-widget-name" name="profile-link-widget-name" placeholder="name">
-                                <input type="text" id="profile-link-widget-username" name="profile-link-widget-username" placeholder="username">
-                                <input type="text" id="profile-link-widget-link" name="profile-link-widget-link" placeholder="link">
+                                <label for="profile-link-widget-name">Name of the link</label>
+                                <input type="text" id="profile-link-widget-name" name="profile-link-widget-name">
+                                <div class="w-100 form-separation-area"></div>
+                                <label for="profile-link-widget-username">Username of the link</label>
+                                <input type="text" id="profile-link-widget-username" name="profile-link-widget-username">
+                                <div class="w-100 form-separation-area"></div>
+                                <label for="profile-link-widget-link">URL of the link</label>
+                                <input type="text" id="profile-link-widget-link" name="profile-link-widget-link">
                             </fieldset>
                         </div>
                         <fieldset class="d-flex flex-column flex-sm-row gap-2 w-100">
-                            <button type="submit" class="button">update</button>
-                            <button onclick="F_ToggleEditProfileLinkWidgetPopup();" type="button" class="button">cancel</button>
-                            <button onclick="F_ToggleEditProfileLinkWidgetPopup();" type="button" class="button">delete</button>
+                            <button type="submit" class="button" title="Update the informations of the profile link widget">update</button>
+                            <button onclick="F_ToggleEditProfileLinkWidgetPopup();" type="button" class="button" title="Cancel the modifications of the informations of the profile link widget">cancel</button>
+                            <button onclick="F_ToggleEditProfileLinkWidgetPopup();" type="button" class="button" title="Delete the profile link widget">delete</button>
                         </fieldset>
                     </form>
                 </div>

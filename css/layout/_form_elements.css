@@ -64,3 +64,11 @@ textarea {
 }
 textarea:hover { outline: 2px solid var(--color-c2a-a); }
 textarea:focus { outline-color: var(--color-c2a-a) !important; }
+
+
+
+.form-seperation-area { height: 10px; }
+
+@media (max-width: 576px) {
+    .form-seperation-area { height: 2px; }
+}

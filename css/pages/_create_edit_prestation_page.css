@@ -26,9 +26,5 @@
     height: 200px;
 }
 
-.file-upload-zone input {
-    display: none;
-}
-.file-upload-zone label {
-    cursor: pointer;
-}
+.file-upload-zone input { display: none; }
+.file-upload-zone label { cursor: pointer; }

@@ -12,8 +12,13 @@
     border-radius: 15px;
 }
 
-.navbar-logo {
+.navbar-logo { object-fit: contain; }
+.navbar-image {
     object-fit: contain;
+    border: none;
+}
+.navbar-image:hover {
+    border: 5px solid var(--color-c2a-a);
 }
 
 .navbar-action-button {
