@@ -18,24 +18,11 @@
     overscroll-behavior-x: contain;
 }
 
-#description {
-    height: 200px;
-}
-
-.content {
-    position: relative;
-    min-height: 100%;
-    flex-grow: 1;
-}
-.content-element {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: fit-content;
-}
+#description { height: 200px; }
 
 #edit-profile-link-widget-popup {
-    background: var(--color-secondary-30);
-    border-radius: 15px;
+    display: flex;
+    border-radius: 10px;
 }
+
+#links-container { display: flex; }
