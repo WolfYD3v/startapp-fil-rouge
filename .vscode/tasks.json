@@ -1,0 +1,38 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run terminals",
+            "type": "shell",
+            "dependsOn": ["LOCAL_SERVER", "GIT"],
+            "runOptions": {
+                "runOn": "folderOpen" // <-- C'est cette ligne qui fait la magie ✨
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "LOCAL_SERVER",
+            "type": "process",
+            "command": "./start_local_server.sh",
+            "isBackground": true,
+            "presentation": {
+                "group": "my-terminals",
+                "panel": "dedicated",
+                "focus": true
+            }
+        },
+        {
+            "label": "GIT",
+            "type": "process",
+            "command": "bash",
+            "isBackground": true,
+            "presentation": {
+                "group": "my-terminals",
+                "panel": "dedicated"
+            }
+        }
+    ]
+}
