@@ -6,7 +6,7 @@
             "type": "shell",
             "dependsOn": ["LOCAL_SERVER", "GIT"],
             "runOptions": {
-                "runOn": "folderOpen" // <-- C'est cette ligne qui fait la magie ✨
+                "runOn": "folderOpen"
             },
             "group": {
                 "kind": "build",

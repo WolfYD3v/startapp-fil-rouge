@@ -1,0 +1,18 @@
+Mettre en place le JS sur le site:
+
+Fonctionnalités à ajouer:
+    - Un menu burger fonctionnel
+    - Un slider (carrousel de contenu)
+    - Un formulaire dynamique (interaction, message de confirmation ou vérification simple)
+
+Objectifs:
+    - Implémenter les fonctionnalités dynamiques en JavaScript
+    - Enregistrer une vidéo Loom (formule gratuite) de 5 minutes maximum montrant le fonctionnement des fonctionnalités
+    - Déployer votre projet sur GitHub Pages [ DONE ]
+    - Pousser l’ensemble du code sur GitHub
+
+Rendu attendu:
+Un fichier avec 3 liens dedans:
+    - Le lien vers vers votre dépôt GitHub
+    - Le lien vers vers votre vidéo Loom
+    - Le lien vers vers votre site déployé via GitHub Pages
