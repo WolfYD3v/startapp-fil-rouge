@@ -1,7 +1,7 @@
 Mettre en place le JS sur le site:
 
 Fonctionnalités à ajouer:
-    - Un menu burger fonctionnel
+    - Un menu burger fonctionnel [ DONE ]
     - Un slider (carrousel de contenu)
     - Un formulaire dynamique (interaction, message de confirmation ou vérification simple)
 
@@ -13,6 +13,6 @@ Objectifs:
 
 Rendu attendu:
 Un fichier avec 3 liens dedans:
-    - Le lien vers vers votre dépôt GitHub
-    - Le lien vers vers votre vidéo Loom
-    - Le lien vers vers votre site déployé via GitHub Pages
+    - Le lien vers votre dépôt GitHub
+    - Le lien vers votre vidéo Loom
+    - Le lien vers votre site déployé via GitHub Pages

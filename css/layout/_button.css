@@ -23,6 +23,12 @@
     border-bottom: 2px solid black !important;
     transition: all 0.5s;
 }
+.button:disabled {
+    cursor: default !important;
+    background-color: red;
+    color: white;
+    border: none !important;
+}
 
 @media (max-width: 576px) {
     .button { height: 40px; }
