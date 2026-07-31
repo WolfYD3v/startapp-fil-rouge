@@ -5,12 +5,11 @@ let visible = true;
 export function tryInitNavbarBurgerMenu() {
     navbarBurgerMenu = document.getElementById("navbar-burger-menu");
     toggleNavbarBurgerMenuBtn = document.getElementById("toggle-navbar-burger-menu-btn");
-    console.log(navbarBurgerMenu);
-    console.log(toggleNavbarBurgerMenuBtn);
     if (toggleNavbarBurgerMenuBtn && navbarBurgerMenu) {
         toggleNavbarBurgerMenuBtn.addEventListener("click", () => {
             toggleNavbarBurgerMenu();
         });
+        toggleNavbarBurgerMenu();
     }
 }
 

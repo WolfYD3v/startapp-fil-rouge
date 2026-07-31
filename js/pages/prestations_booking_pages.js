@@ -1,18 +1,24 @@
-import "../load_html.js"
+// IMPORTS
+import { loadHTML } from "../load_html.js";
 
 
 
+// CONSTANTES
 const MAX_PRESTATION_CARDS_PER_PAGE = 10;
 const MIN_PRESPATION_PAGE_IDX = 1;
 const DATA_BASE_PATH = "../../db/main_db.json";
 
 
 
+// VARIABLES
+// DOM Elements
 let prestationsContainer = document.getElementById("prestations-container");
 let previousPageBtn = document.getElementById("previous-page-btn");
 let nextPageBtn = document.getElementById("next-page-btn");
 let pageCounter = document.getElementById("page-counter");
 
+
+// Other variables
 let currentPageIdx = MIN_PRESPATION_PAGE_IDX;
 let bookedPrestationsCount = 0;
 
@@ -30,6 +36,7 @@ nextPageBtn.addEventListener("click", () => {
 
 
 
+// Definition of functions
 function getBookedPrestations() {   
     var promise = fetch(DATA_BASE_PATH)
         .then(response => {
@@ -64,5 +71,6 @@ function updatePageListingSelectionContainer() {
     nextPageBtn.disabled = bookedPrestationsCount <= (MAX_PRESTATION_CARDS_PER_PAGE * currentPageIdx);
 }
 
+// Start the script by calling functons
 getBookedPrestations()
     .then(() => { updatePageListingSelectionContainer(); });

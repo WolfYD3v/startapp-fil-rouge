@@ -26,15 +26,7 @@
         </main>
         
         <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
-        <script src="js/load_html.js"></script>
+        <script src="js/pages/setup_page.js" type="module"></script>
         <script src="js/pages/listing_page.js" type="module"></script>
-        <script>
-            loadHTML("compenents/navbar.html", "navbar-container");
-            loadHTML("compenents/footer.html", "footer-container");
-        </script>
-        <script type="module"> // A revoir, car là c'est juste immonde comme implémentation
-            import { tryInitNavbarBurgerMenu } from "./js/compenents/navbar_burger_menu.js";
-            setTimeout(tryInitNavbarBurgerMenu, 1000.0);
-        </script>
     </body>
 </html>

@@ -1,12 +1,10 @@
-function loadHTML(V_HTMLFilePath, V_ElementId) {
-    console.log(`HTML Loader - Loading HTML File '${V_HTMLFilePath}' For Element with Id '${V_ElementId}' ...`);
-    let success = false;
+export function loadHTML(HTMLFilePath, elementId) {
+    console.log(`HTML Loader - Loading HTML File '${HTMLFilePath}' For Element with Id '${elementId}' ...`);
 
-    fetch(V_HTMLFilePath)
+    return fetch(HTMLFilePath)
         .then(response => response.text())
-        .then(text => document.getElementById(V_ElementId).innerHTML += text)
-        .then(text => success = true)
-        .catch(error => success = false);
-    
-    return success
+        .then(text => {
+            let container = document.getElementById(elementId);
+            if (container) { container.innerHTML += text; }
+        });
 }
