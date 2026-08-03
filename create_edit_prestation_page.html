@@ -12,7 +12,7 @@
             <div id="navbar-container"></div>
             <div class="container">
                 <p>All fields marked with * are required</p>
-                <form class="d-flex flex-column w-100 h-auto gap-1 gap-sm-2" action="prestation_details_page.html?booked=1" method="get">
+                <form id="form" class="d-flex flex-column w-100 h-auto gap-1 gap-sm-2" action="prestation_details_page.html?booked=1" method="get" novalidate>
                     
                     <!-- FORM SECTION 1 : General Informations -->
                     <fieldset class="form-section-container d-flex flex-column h-auto w-100 gap-2 p-1">
@@ -20,7 +20,7 @@
                             <button id="form-section-1-toggle-button" type="button" class="button" title="Develop this form section">v</button>
                             <h3 class="d-flex align-items-center h-100 text-decoration-underline">I - General Informations</h3>
                         </div>
-                        <div id="form-section-1-form" class="d-flex flex-column h-auto w-100 gap-2 p-1">
+                        <div id="form-section-1" class="d-flex flex-column h-auto w-100 gap-2 p-1">
                             <label for="prestation-name">Name your prestation (75 characters max.) *</label>
                             <input type="text" maxlength="75" id="prestation-name" name="prestation-name" required />
                             <div class="w-100 form-seperation-area"></div>
@@ -54,7 +54,7 @@
                             <button id="form-section-2-toggle-button" type="button" class="button" title="Develop this form section">v</button>
                             <h3 class="d-flex align-items-center h-100 text-decoration-underline">II - Desciption</h3>
                         </div>
-                        <div id="form-section-2-form" class="d-flex flex-column h-auto w-100 gap-2 p-1">
+                        <div id="form-section-2" class="d-flex flex-column h-auto w-100 gap-2 p-1">
                             <label for="desciption-text">Describe your prestation to show the objectives of what you sell (1500 characters max.) *</label>
                             <textarea id="desciption-text" name="desciption-text" maxlength="1500" required></textarea>
                         </div>
@@ -66,7 +66,7 @@
                             <button id="form-section-3-toggle-button" type="button" class="button" title="Develop this form section">v</button>
                             <h3 class="d-flex align-items-center h-100 text-decoration-underline">III - Date and Pricing</h3>
                         </div>
-                        <div id="form-section-3-form" class="d-flex flex-column h-auto w-100 gap-2 p-1">
+                        <div id="form-section-3" class="d-flex flex-column h-auto w-100 gap-2 p-1">
                             <label for="date">When your prestation will occur? *</label>
                             <input type="date" id="date" name="date" required>
                             <div class="w-100 form-seperation-area"></div>
@@ -88,62 +88,7 @@
         </main>
         
         <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
-        <script src="js/load_html.js"></script>
-        <script src="js/get_url_arument.js"></script>
+        <script src="js/pages/setup_page.js" type="module"></script>
+        <script src="js/pages/create_edit_prestation_page.js" type="module"></script>
     </body>
 </html>
-
-<script>
-    function F_SetFormSectionDisplay(V_FormSectionToggleButton, V_FormSection, V_Visible) {
-        if (V_Visible) { V_FormSection.style.setProperty("display", "flex", "important"); }
-        else { V_FormSection.style.setProperty("display", "none", "important"); }
-
-        if (V_Visible) {
-        V_FormSectionToggleButton.innerText = ">";
-        V_FormSectionToggleButton.title = "Hide this form section";
-    }
-        else {
-            V_FormSectionToggleButton.innerText = "v";
-            V_FormSectionToggleButton.title = "Develop this form section";
-        }
-    }
-
-    const C_FormSection1Form = document.getElementById("form-section-1-form");
-    const C_FormSection1ToggleButton = document.getElementById("form-section-1-toggle-button");
-    var V_FormSection1Visible = true
-    C_FormSection1ToggleButton.addEventListener("click", function (e) {
-        V_FormSection1Visible = !V_FormSection1Visible;
-        F_SetFormSectionDisplay(C_FormSection1ToggleButton, C_FormSection1Form, V_FormSection1Visible);
-    });
-
-    const C_FormSection2Form = document.getElementById("form-section-2-form");
-    const C_FormSection2ToggleButton = document.getElementById("form-section-2-toggle-button");
-    var V_FormSection2Visible = false
-    C_FormSection2ToggleButton.addEventListener("click", function (e) {
-        V_FormSection2Visible = !V_FormSection2Visible;
-        F_SetFormSectionDisplay(C_FormSection2ToggleButton, C_FormSection2Form, V_FormSection2Visible);
-    });
-
-    const C_FormSection3Form = document.getElementById("form-section-3-form");
-    const C_FormSection3ToggleButton = document.getElementById("form-section-3-toggle-button");
-    var V_FormSection3Visible = false
-    C_FormSection3ToggleButton.addEventListener("click", function (e) {
-        V_FormSection3Visible = !V_FormSection3Visible;
-        F_SetFormSectionDisplay(C_FormSection3ToggleButton, C_FormSection3Form, V_FormSection3Visible);
-    });
-
-    setTimeout(function (e) {
-        F_SetFormSectionDisplay(C_FormSection1ToggleButton, C_FormSection1Form, true);
-        F_SetFormSectionDisplay(C_FormSection2ToggleButton, C_FormSection2Form, false);
-        F_SetFormSectionDisplay(C_FormSection3ToggleButton, C_FormSection3Form, false);
-    }, 500)
-
-    const C_SubmitButton = document.getElementById("submit-button");
-    if (F_GetURLArgument("edit") == 1) {
-        C_SubmitButton.innerText = "Update";
-        C_SubmitButton.title = "Update the informations of the modified prestation";
-    }
-
-    F_LoadHTML("compenents/navbar.html", "navbar-container");
-    F_LoadHTML("compenents/footer.html", "footer-container");
-</script>

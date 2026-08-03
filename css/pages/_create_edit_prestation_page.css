@@ -26,5 +26,9 @@
     height: 200px;
 }
 
+.form-field-invalid {
+    color: red;
+}
+
 .file-upload-zone input { display: none; }
 .file-upload-zone label { cursor: pointer; }
