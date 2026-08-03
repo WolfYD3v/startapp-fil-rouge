@@ -3,7 +3,7 @@ Mettre en place le JS sur le site:
 Fonctionnalités à ajouer:
     - Un menu burger fonctionnel [ DONE ]
     - Un slider (carrousel de contenu)
-    - Un formulaire dynamique (interaction, message de confirmation ou vérification simple)
+    - Un formulaire dynamique (interaction, message de confirmation ou vérification simple) [ DONE ]
 
 Objectifs:
     - Implémenter les fonctionnalités dynamiques en JavaScript
