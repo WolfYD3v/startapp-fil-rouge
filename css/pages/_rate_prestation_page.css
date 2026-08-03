@@ -2,6 +2,27 @@
     height: 200px;
 }
 
+#stars-container {
+    width: fit-content;
+}
+
+.rating-star {
+    opacity: 1.0;
+    cursor: default;
+    user-select: none;
+}
+.rating-star:hover {
+    cursor: pointer;
+}
+
+.star-hovered {
+    opacity: 0.35 !important;
+}
+
+.rating-star-activated {
+    color: var(--color-star-selected);
+}
+
 .rating-star-not-activated {
     color: var(--color-star-not-selected);
 }
