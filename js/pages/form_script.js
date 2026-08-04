@@ -65,7 +65,7 @@ function validateFormField(formField) {
         formField.classList.add(FORM_FIELD_INVALID_CLASS);
         formField.previousElementSibling.insertAdjacentHTML(
             "beforeend",
-            `<p style="color: red;" title="An error has been made while filling the form: ${formField.validationMessage}">${formField.validationMessage}</p>`
+            `<p style="color: red; margin: 0px; margin-top: 5px;" title="An error has been made while filling the form: ${formField.validationMessage}">${formField.validationMessage}</p>`
         )
     }
 

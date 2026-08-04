@@ -11,12 +11,18 @@
             <div class="d-flex flex-column w-100 h-auto p-sm-4 gap-3 gap-sm-1 justify-content-center">
                 <div class="d-flex flex-column w-100 h-auto p-3 p-sm-5 gap-4 justify-content-center align-items-center">
                     <h2 class="text-center fw-bold w-100">Join the StartApp adventure by creating your account</h2>
-                    <form class="d-flex flex-column w-100 gap-3" action="verify_account_page.html" method="get">
+                    <form id="sign-in-form" class="d-flex flex-column w-100 gap-3" action="verify_account_page.html" method="get" novalidate>
                         <fieldset class="d-flex flex-column w-100 gap-2">
+                            <label for="username-text"></label>
                             <input id="username-text" name="username-text" type="text" placeholder="Username" required >
-                            <input id="phone-number-text" name="phone-number-text" type="tel" placeholder="Phone Number" required >
+                            <label for="phone-number-text"></label>
+                            <input id="phone-number-text" name="phone-number-text" type="tel" placeholder="Phone Number" pattern="[0-9]{10}" inputmode="numeric" autocomplete="tel" required >
+                            <small>Format expected: 0123456789</small>
+                            <label for="e-mail-text"></label>
                             <input id="e-mail-text" name="e-mail-text" type="email" placeholder="E-Mail" required >
+                            <label for="password-text"></label>
                             <input id="password-text" name="password-text" type="text" placeholder="Password" required >
+                            <label for="confirm-password-text"></label>
                             <input id="confirm-password-text" name="confirm-password-text" type="text" placeholder="Confirm Password" required >
                         </fieldset>
                         <div class="w-100" style="height: 25px;"></div>
@@ -34,5 +40,9 @@
         </main>
         
         <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+        <script type="module">
+            import { initForm } from "./js/pages/form_script.js"
+            initForm("sign-in-form");
+        </script>
     </body>
 </html>
