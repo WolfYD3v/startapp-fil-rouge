@@ -11,8 +11,8 @@
         <main class="d-flex flex-column w-100 h-100 p-sm-5 justify-content-center align-items-center">
             <div class="d-flex flex-column w-100 h-auto p-sm-5 justify-content-center">
                 <h2 class="text-center fw-bold w-100">Enter the code you have received</h2>
-                <form class="w-100 d-flex flex-column justify-content-center p-sm-5 gap-4" action="profile_page.html" method="get">
-                    <fieldset class="w-100 d-flex flex-row justify-content-center gap-2">
+                <form id="verify-account-form" class="w-100 d-flex flex-column justify-content-center p-sm-5 gap-4" action="profile_page.html" method="get" novalidate>
+                    <fieldset id="verify-account-asks-container" class="w-100 d-flex flex-row justify-content-center gap-2">
                         <input type="text" id="verify-account_ask_1" name="verify-account_ask_1" placeholder="___" maxlength="1" required>
                         <input type="text" id="verify-account_ask_2" name="verify-account_ask_2" placeholder="___" maxlength="1" required>
                         <input type="text" id="verify-account_ask_3" name="verify-account_ask_3" placeholder="___" maxlength="1" required>
@@ -22,13 +22,14 @@
                     </fieldset>
                     <div class="w-100" style="height: 25px;"></div>
                     <fieldset class="w-100 d-flex flex-column gap-1 align-items-center">
-                        <a href="#" class="link" title="If you haven't received a 6 characters code, a new one will be send by clicking here">Re-send Code</a>
-                        <button id="verify-account-button" type="submit" class="button" title="Check if the code is right, and finalise your account">Validate Code</button>
+                        <a id="re-send-code-btn" class="link" title="If you haven't received a 6 characters code, a new one will be send by clicking here">Re-send Code</a>
+                        <button type="submit" class="button" title="Check if the code is right, and finalise your account">Validate Code</button>
                     </fieldset>
                 </form>
             </div>
         </main>
         
         <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="js/pages/verify_account_page.js"></script>
     </body>
 </html>
