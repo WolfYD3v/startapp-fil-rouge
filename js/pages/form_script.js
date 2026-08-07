@@ -38,7 +38,9 @@ function initListeners() {
             }
         });
 
-        if (formValid) { event.target.submit(); }
+        if (formValid) {
+            event.target.submit();
+        }
         else {
             let firstErrorElement = document.querySelector(`label[for = ${errors[0].previousElementSibling.getAttribute("for")}]`);
             firstErrorElement.scrollIntoView({behavior: 'smooth'});
