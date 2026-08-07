@@ -9,6 +9,8 @@
     --color-secondary-30:           rgba(112, 155, 163, 0.75);
     --color-c2a-a:                  rgb(37, 113, 185);
     --color-c2a-b:                  rgb(255, 255, 255);
+    --color-c2a-disabled-a:         rgb(14, 53, 90);
+    --color-c2a-disabled-b:         rgb(0, 0, 0);
     --color-text:                   rgb(0, 0, 0);
     --color-star-not-selected:      rgb(21, 180, 0);
     --color-star-selected:          rgb(13, 109, 0);

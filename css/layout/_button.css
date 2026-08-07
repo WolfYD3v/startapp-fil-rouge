@@ -25,8 +25,8 @@
 }
 .button:disabled {
     cursor: default !important;
-    background-color: red;
-    color: white;
+    background-color: var(--color-c2a-disabled-a);
+    color: var(--color-c2a-disabled-b);
     border: none !important;
 }
 
