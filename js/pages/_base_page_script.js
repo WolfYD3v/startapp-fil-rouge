@@ -1,5 +1,6 @@
 // IMPORTS
 import { loadHTML } from "../load_html.js";
+import "./setup_page.js";
 
 
 
