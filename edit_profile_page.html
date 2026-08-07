@@ -11,7 +11,7 @@
         <main>
             <div id="navbar-container"></div>
             <div class="container">
-                <form class="d-flex flex-column gap-3" action="profile_page.html" method="get">
+                <form id="edit-profile-form" class="d-flex flex-column gap-3" action="profile_page.html" method="get" novalidate>
                     <div class="d-flex flex-column flex-md-row gap-2 gap-sm-3 w-100">
                         <img class="profile-user-image" src="assets/images/user_image.jpg" alt="Your user profile picture">
                         <fieldset class="w-100 d-flex flex-column gap-2">
@@ -27,7 +27,13 @@
                         
                         <div id="edit-profile-link-widget-popup" class="h-100 flex-column justify-content-center align-items-center gap-2 p-4">
                             <div class="d-flex flex-column flex-sm-row gap-3 w-100">
-                                <img src="assets/images/social_networks_image.png" alt="A social networks image" width="150" height="150">
+                                <div class="file-upload-zone d-flex flex-column gap-3">
+                                    <label for="image-upload-zone">Link custom image</label>
+                                    <div class="d-flex flex-column gap-1 gap-sm-2 w-100">
+                                        <img src="assets/images/social_networks_image.png" alt="A social networks image" width="150" height="150">
+                                        <input type="file" id="image-upload-zone" name="image-upload-zone" accept=".jpg, .jpeg, .png, .webp">
+                                    </div>
+                                </div>
                                 <div class="d-flex flex-column gap-2 w-100">
                                     <label for="profile-link-widget-name">Name of the link</label>
                                     <input type="text" id="profile-link-widget-name" name="profile-link-widget-name">
@@ -41,14 +47,14 @@
                             </div>
                             <div class="w-100 form-separation-area"></div>
                             <div class="w-100 form-separation-area"></div>
-                            <div class="d-flex flex-column flex-sm-row gap-2 w-100">
-                                <button onclick="F_ToggleEditProfileLinkWidgetPopup();" type="button" class="button" title="Update the informations of the profile link widget">update</button>
-                                <button onclick="F_ToggleEditProfileLinkWidgetPopup();" type="button" class="button" title="Cancel the modifications of the informations of the profile link widget">cancel</button>
-                                <button onclick="F_ToggleEditProfileLinkWidgetPopup();" type="button" class="button" title="Delete the profile link widget">delete</button>
+                            <div id="edit-profile-link-widget-popup-buttons-container" class="d-flex flex-column flex-sm-row gap-2 w-100">
+                                <button id="update-profile-link-widget-btn" type="button" class="button" title="Update the informations of the profile link widget">update</button>
+                                <button id="cancel-profile-link-widget-btn" type="button" class="button" title="Cancel the modifications of the informations of the profile link widget">cancel</button>
+                                <button id="delete-profile-link-widget-btn" type="button" class="button" title="Delete the profile link widget">delete</button>
                             </div>
                         </div>
 
-                        <a id="create-profile-link-widget-button" onclick="F_LoadHTML('compenents/profile_link_widget_bis.html', 'links-container');" class="button fw-bold" title="Add a new profile link widget to your profile, click on it to edit it">+</a>
+                        <a id="create-profile-link-widget-button" class="button fw-bold" title="Add a new profile link widget to your profile, click on it to edit it">+</a>
                     </div>
                     <label class="w-100" for="description">Tell about yourself (1500 characters max.)</label>
                     <textarea class="w-100" name="description" id="description" maxlength="1500"></textarea>
@@ -62,43 +68,6 @@
         </main>
 
         <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
-        <script src="js/load_html.js"></script>
+        <script src="js/pages/edit_profile_page.js" type="module"></script>
     </body>
 </html>
-
-<script>
-    F_LoadHTML("compenents/navbar.html", "navbar-container");
-    F_LoadHTML("compenents/footer.html", "footer-container");
-
-    F_LoadHTML("compenents/profile_link_widget_bis.html", "links-container");
-    F_LoadHTML("compenents/profile_link_widget_bis.html", "links-container");
-    F_LoadHTML("compenents/profile_link_widget_bis.html", "links-container");
-    F_LoadHTML("compenents/profile_link_widget_bis.html", "links-container");
-    F_LoadHTML("compenents/profile_link_widget_bis.html", "links-container");
-
-    const C_LinksContainer = document.getElementById("links-container");
-    C_LinksContainer.addEventListener("wheel", (e) => {
-        if (e.deltaY !== 0) { e.preventDefault(); }
-        C_LinksContainer.scrollBy({
-            left: e.deltaY,
-            behavior: 'auto'
-        });
-    }, { passive: false });
-
-    const C_EditProfileLinkWidgetPopup = document.getElementById("edit-profile-link-widget-popup");
-    C_EditProfileLinkWidgetPopup.style.display = "none";
-    var V_EditProfileLinkWidgetPopupToggled = false;
-    function F_ToggleEditProfileLinkWidgetPopup() {
-        V_EditProfileLinkWidgetPopupToggled = !V_EditProfileLinkWidgetPopupToggled;
-        if (V_EditProfileLinkWidgetPopupToggled) {
-            C_EditProfileLinkWidgetPopup.style.display = "flex";
-            C_LinksContainer.style.display = "none";
-            document.getElementById("create-profile-link-widget-button").style.display = "none";
-        }
-        else {
-            C_EditProfileLinkWidgetPopup.style.display = "none";
-            C_LinksContainer.style.display = "flex";
-            document.getElementById("create-profile-link-widget-button").style.display = "flex";
-        }
-    }
-</script>

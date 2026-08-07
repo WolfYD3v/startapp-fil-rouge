@@ -1,0 +1,9 @@
+.file-upload-zone {
+    width: 150px;
+}
+
+.file-upload-zone label { cursor: pointer; }
+
+@media (max-width: 576px) {
+    .file-upload-zone { gap: 5px; }
+}

@@ -1,7 +1,14 @@
 .profile_disponibility_agenda_day_card {
-    background: white;
+    background: var(--color-c2a-b);
     border-radius: 15px;
     border-bottom: 3px solid black;
+    cursor: default;
+    transition: all 0.5s;
+}
+.profile_disponibility_agenda_day_card:hover {
+    cursor: pointer;
+    color: var(--color-c2a-b);
+    background: var(--color-c2a-a);
 }
 
 .profile_disponibility_agenda_day_card div:nth-child(1) {

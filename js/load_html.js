@@ -5,6 +5,6 @@ export function loadHTML(HTMLFilePath, elementId) {
         .then(response => response.text())
         .then(text => {
             let container = document.getElementById(elementId);
-            if (container) { container.innerHTML += text; }
+            if (container) { container.insertAdjacentHTML('beforeend', text); }
         });
 }

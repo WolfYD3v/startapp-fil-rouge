@@ -10,7 +10,7 @@
     <body>
         <main>
             <div id="navbar-container"></div>
-            <div class="container">
+            <div id="container" class="container">
                 <div class="d-flex flex-column flex-md-row gap-2 gap-sm-3">
                     <img class="profile-user-image" src="assets/images/user_image.jpg" alt="Your user profile picture">
                     <h2 class="w-100 fw-bold">Profile Name</h2>
@@ -21,23 +21,12 @@
                         <div id="montly-prestations-list-container" class="montly-prestations-list-container d-flex flex-column gap-1"></div>
                     </div>
                 </div>
-                <a class="button" title="Load more prestation hosted from {Profile Name}">See More</a>
+                <button id="see-more-prestations-btn" class="button" title="Load more prestation hosted from {Profile Name}">see more prestations</button>
             </div>
             <div id="footer-container"></div>
         </main>
 
         <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
-        <script src="js/load_html.js"></script>
+        <script src="js/pages/profile_disponibility_agenda.js" type="module"></script>
     </body>
 </html>
-
-<script>
-    F_LoadHTML("compenents/navbar.html", "navbar-container");
-    F_LoadHTML("compenents/footer.html", "footer-container");
-
-    F_LoadHTML("compenents/profile_disponibility_agenda_day_card.html", "montly-prestations-list-container");
-    F_LoadHTML("compenents/profile_disponibility_agenda_day_card.html", "montly-prestations-list-container");
-    F_LoadHTML("compenents/profile_disponibility_agenda_day_card.html", "montly-prestations-list-container");
-    F_LoadHTML("compenents/profile_disponibility_agenda_day_card.html", "montly-prestations-list-container");
-    F_LoadHTML("compenents/profile_disponibility_agenda_day_card.html", "montly-prestations-list-container");
-</script>

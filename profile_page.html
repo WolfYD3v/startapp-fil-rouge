@@ -36,26 +36,6 @@
         </main>
 
         <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
-        <script src="js/load_html.js"></script>
+        <script src="js/pages/profile_page.js" type="module"></script>
     </body>
 </html>
-
-<script>
-    F_LoadHTML("compenents/navbar.html", "navbar-container");
-    F_LoadHTML("compenents/footer.html", "footer-container");
-
-    F_LoadHTML("compenents/profile_link_widget.html", "links-container");
-    F_LoadHTML("compenents/profile_link_widget.html", "links-container");
-    F_LoadHTML("compenents/profile_link_widget.html", "links-container");
-    F_LoadHTML("compenents/profile_link_widget.html", "links-container");
-    F_LoadHTML("compenents/profile_link_widget.html", "links-container");
-
-    const C_LinksContainer = document.getElementById("links-container");
-    C_LinksContainer.addEventListener("wheel", (e) => {
-        if (e.deltaY !== 0) { e.preventDefault(); }
-        C_LinksContainer.scrollBy({
-            left: e.deltaY,
-            behavior: 'auto'
-        });
-    }, { passive: false });
-</script>

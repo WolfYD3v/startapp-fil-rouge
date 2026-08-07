@@ -15,6 +15,7 @@
 @import url(compenents/_notification_card.css);
 @import url(compenents/_profile_link_widget.css);
 @import url(compenents/_profile_disponibility_agenda_day_card.css);
+@import url(compenents/_image_import.css);
 
 /* Base Files */
 @import url("base/_reset.css");
