@@ -12,12 +12,6 @@ Objectifs:
     - Pousser l’ensemble du code sur GitHub
 
 
-Pages du site à JavaScripté:
-wolfyd3v@wolfyd3v-Lenovo-G70-70:~/Documents/Formation-Pro/startapp-fil-rouge$ ls -a | grep prestation
-create_edit_prestation_page.html [ DONE ]
-prestation_details_page.html [ DONE ]
-prestations_booked_page.html [ DONE ]
-rate_prestation_page.html [ DONE ]
 wolfyd3v@wolfyd3v-Lenovo-G70-70:~/Documents/Formation-Pro/startapp-fil-rouge$ ls -a | grep profile
 edit_profile_page.html [ DONE / still some WIP later ]
 profile_disponibility_agenda.html [ DONE ]

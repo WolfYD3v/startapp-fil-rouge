@@ -35,12 +35,11 @@
                             </select>
                             <div class="w-100 form-seperation-area"></div>
                             <label for="file-upload-zone">Upload an illustration image for your prestation (optionnal)</label>
-                            <div id="file-upload-zone" class="file-upload-zone">
-                                <input type="file" id="cover-image" name="cover-image" accept=".jpg, .jpeg, .png, .webp" />
-                                <label for="cover-image" class="prestation-cover-button">
-                                    <img src="assets/images/temp_website_logo.png" alt="Select the cover image for the prestation">
-                                </label>
-                                <span>Click/Drag and drop</span>
+                            <div id="temp-prestation-img" class="file-upload-zone d-flex flex-column gap-3">
+                                <div class="d-flex flex-column gap-1 gap-sm-2 w-100">
+                                    <img src="assets/images/prestation_image.jpg" alt="Your user profile picture" width="150" height="150">
+                                    <input type="file" id="image-upload-zone" name="image-upload-zone" accept=".jpg, .jpeg, .png, .webp">
+                                </div>
                             </div>
                             <div class="w-100 form-seperation-area"></div>
                             <label for="location">Where does the presentation take place (in person/online)? *</label>
@@ -89,6 +88,7 @@
         
         <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
         <script src="js/pages/setup_page.js" type="module"></script>
+        <script src="js/pages/file_upload_zones.js"></script>
         <script src="js/pages/create_edit_prestation_page.js" type="module"></script>
     </body>
 </html>

@@ -13,7 +13,12 @@
             <div class="container">
                 <form id="edit-profile-form" class="d-flex flex-column gap-3" action="profile_page.html" method="get" novalidate>
                     <div class="d-flex flex-column flex-md-row gap-2 gap-sm-3 w-100">
-                        <img class="profile-user-image" src="assets/images/user_image.jpg" alt="Your user profile picture">
+                        <div id="user-image-img" class="file-upload-zone d-flex flex-column gap-3">
+                            <div class="d-flex flex-column gap-1 gap-sm-2 w-100">
+                                <img src="assets/images/user_image.jpg" alt="Your user profile picture" width="150" height="150">
+                                <input type="file" id="image-upload-zone" name="image-upload-zone" accept=".jpg, .jpeg, .png, .webp">
+                            </div>
+                        </div>
                         <fieldset class="w-100 d-flex flex-column gap-2">
                             <label for="profile-name">Change your username (50 characters max.)</label>
                             <input type="text" maxlength="50" id="profile-name" name="profile-name" />
@@ -27,7 +32,7 @@
                         
                         <div id="edit-profile-link-widget-popup" class="h-100 flex-column justify-content-center align-items-center gap-2 p-4">
                             <div class="d-flex flex-column flex-sm-row gap-3 w-100">
-                                <div class="file-upload-zone d-flex flex-column gap-3">
+                                <div id="edit-profile-link-widget-img" class="file-upload-zone d-flex flex-column gap-3">
                                     <label for="image-upload-zone">Link custom image</label>
                                     <div class="d-flex flex-column gap-1 gap-sm-2 w-100">
                                         <img src="assets/images/social_networks_image.png" alt="A social networks image" width="150" height="150">
@@ -68,6 +73,7 @@
         </main>
 
         <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="js/pages/file_upload_zones.js"></script>
         <script src="js/pages/edit_profile_page.js" type="module"></script>
     </body>
 </html>
