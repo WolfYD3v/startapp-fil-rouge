@@ -6,7 +6,7 @@ Fonctionnalités à ajouer:
     - Un formulaire dynamique (interaction, message de confirmation ou vérification simple) [ DONE ]
 
 Objectifs:
-    - Implémenter les fonctionnalités dynamiques en JavaScript
+    - Implémenter les fonctionnalités dynamiques en JavaScript [ DONE ]
     - Enregistrer une vidéo Loom (formule gratuite) de 5 minutes maximum montrant le fonctionnement des fonctionnalités
     - Déployer votre projet sur GitHub Pages [ DONE ]
     - Pousser l’ensemble du code sur GitHub
