@@ -13,7 +13,7 @@ Objectifs:
 
 
 wolfyd3v@wolfyd3v-Lenovo-G70-70:~/Documents/Formation-Pro/startapp-fil-rouge$ ls -a | grep profile
-edit_profile_page.html [ DONE / still some WIP later ]
+edit_profile_page.html [ DONE ]
 profile_disponibility_agenda.html [ DONE ]
 profile_page.html [ DONE ]
 
