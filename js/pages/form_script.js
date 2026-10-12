@@ -17,7 +17,7 @@ let hasBeenInit = false;
 export function initForm(formNodeId) {
     form = document.getElementById(formNodeId);
     formFields = document.querySelectorAll("input[required], textarea[required]");
-    console.log(formFields);
+    //console.log(formFields);
     initListeners();
 
     hasBeenInit = true;

@@ -8,10 +8,6 @@ let submitButton = document.getElementById("submit-button");
 let stars = starsContainer.querySelectorAll(".rating-star");
 
 // Other variables
-let visibilities = {
-    false: "hidden",
-    true: "visible"
-};
 let prestationTookPlace = false;
 let registeredStarsCount = 0;
 
@@ -29,15 +25,18 @@ submitButton.addEventListener("click", (event) => {
     event.preventDefault();
     if (prestationTookPlace) { alert("Review Submited !"); }
     else { alert("We are sorry to hear that, we will do our best to prevent this kind of behavoir happend again on our platform"); }
-    event.submit();
+    ratingForm.submit();
+});
+ratingForm.addEventListener("submit", (event) => {
+    event.target.submit();
 });
 
 
 
 // Definition of functions
 function toggleRatingContainer(value = false) {
-    ratingForm.style.visibility = visibilities[value];
-    starsContainer.style.visibility = visibilities[value];
+    ratingForm.classList.toggle("rating-section-visible", !value);
+    starsContainer.classList.toggle("rating-section-visible", !value);
 }
 
 function initStars() {

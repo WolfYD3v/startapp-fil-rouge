@@ -31,6 +31,9 @@
     height: 50px;
 }
 
+.rating-section-visible { display: none !important; }
+.rating-section-hidden { display: revert !important; }
+
 @media (max-width: 576px) {
     .separation-area { height: 25px; }
 }

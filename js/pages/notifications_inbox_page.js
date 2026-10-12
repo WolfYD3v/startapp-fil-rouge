@@ -4,7 +4,7 @@ import { loadHTML } from "../load_html.js";
 
 
 // CONSTANTES
-const MAX_NOTIFICATIONS_COUNT = 5;
+const MAX_NOTIFICATIONS_COUNT = Math.floor(Math.random() * (6 - 1)) + 1;; // Random for now
 
 
 

@@ -52,10 +52,15 @@ function createStars(stars) {
     }
 
 function loadReviews() {
-    for (let loop = 0; loop < 5; loop++) {
+    // Random number generated for now, as a temporary implementation
+    let totalReviewsCount = Math.floor(Math.random() * (10 - 1)) + 1;
+    
+    for (let loop = 0; loop < totalReviewsCount; loop++) {
         loadHTML("compenents/user_review.html", "reviews");
     }
 }
+
+
 
 // Start the script by calling functons
 init();

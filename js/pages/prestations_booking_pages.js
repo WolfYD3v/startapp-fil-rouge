@@ -57,7 +57,7 @@ function listBookedPrestations(data) {
 
     prestationsContainer.innerHTML = "";
     data.forEach(prestationEntry => {
-        loadHTML("compenents/prestation_card.html", "prestations-container");
+        loadHTML("compenents/prestation_booked_card.html", "prestations-container");
     });
 }
 
