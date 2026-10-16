@@ -1,4 +1,5 @@
 // IMPORTS
+import { DB_MANAGER_INSTANCE } from "../db_manager.js";
 import { loadHTML } from "../load_html.js";
 import { getURLArgument } from "../get_url_arument.js";
 
@@ -17,8 +18,13 @@ let starsContainer = document.getElementById("stars-container");
 let rateBtn = document.getElementById("rate-btn");
 let bookCancelBtn = document.getElementById("book-cancel-btn");
 
+let prestationName = document.getElementById("prestation-name");
+let prestationAuthor = document.getElementById("prestation-author");
+let category = document.getElementById("category");
+let description = document.getElementById("description");
+
 // Other variables
-let prestationBooked = getURLArgument("booked");
+let prestationBooked = false;
 
 // Event Listeners
 bookCancelBtn.addEventListener("click", () => {
@@ -29,9 +35,20 @@ bookCancelBtn.addEventListener("click", () => {
 
 
 // Definition of functions
-function init() {
+async function init() {
+    let prestationId = Number(getURLArgument("prestation_id")) - 1;
+    console.log(prestationId)
+    let data = await DB_MANAGER_INSTANCE.getData("prestations")
+    data = data[prestationId];
+    console.log(data)
+    prestationBooked = data.booked;
+    prestationName.innerText = data.name;
+    prestationAuthor.innerText = data.author;
+    category.innerText = data.category;
+    description.innerText = data.description;
+
     updateButtons();
-    createStars(3);
+    createStars(data.stars);
     loadReviews();
 }
 
@@ -63,4 +80,4 @@ function loadReviews() {
 
 
 // Start the script by calling functons
-init();
+await init();

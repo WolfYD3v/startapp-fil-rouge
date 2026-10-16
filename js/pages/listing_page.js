@@ -1,4 +1,5 @@
 // IMPORTS
+import { DB_MANAGER_INSTANCE } from "../db_manager.js";
 import { loadHTML } from "../load_html.js";
 
 
@@ -6,7 +7,6 @@ import { loadHTML } from "../load_html.js";
 // CONSTANTES
 const MAX_PRESTATION_CARDS_PER_PAGE = 10;
 const MIN_PRESPATION_PAGE_IDX = 1;
-const DATA_BASE_PATH = "../../db/main_db.json";
 
 
 
@@ -37,32 +37,33 @@ nextPageBtn.addEventListener("click", () => {
 
 
 // Definition of functions
-function getAvaiblePrestations() {   
-    var promise = fetch(DATA_BASE_PATH)
-        .then(response => {
-            if (response.ok) { return response.json() }
-            else { return response.json().then(obj => { throw obj }) }
-        })
-        .then(data => listAvaiblePrestations(data))
-        .catch(error => showListingError(error));
-    
-    return promise
+async function getAvaiblePrestations() {
+    let data = await DB_MANAGER_INSTANCE.getData("prestations");
+    listAvaiblePrestations(data);
 }
 
 function listAvaiblePrestations(data) {
-    avaiblePrestationsCount = data.avaiblePrestations.length;
+    avaiblePrestationsCount = data.length;
     let sliceIdxStart = (currentPageIdx - 1) * MAX_PRESTATION_CARDS_PER_PAGE;
     let sliceIdxEnd = MAX_PRESTATION_CARDS_PER_PAGE * currentPageIdx;
-    data = data.avaiblePrestations.slice(sliceIdxStart, sliceIdxEnd)
+    data = data.slice(sliceIdxStart, sliceIdxEnd)
 
+    let counter = 1;
     prestationsContainer.innerHTML = "";
-    data.forEach(prestationEntry => {
-        loadHTML("compenents/prestation_card.html", "prestations-container");
+    data.forEach(async function (prestationEntry) {
+        if (prestationEntry.booked) {
+            await loadHTML("compenents/prestation_card.html", "prestations-container");
+    
+            let prestationCard = prestationsContainer.lastElementChild;
+            if (prestationCard) {
+                let redirectionURL = `prestation_details_page.html?prestation_id=${counter}`;
+                let actionsContainer = prestationCard.querySelector("#actions-container").children;
+                for (let action of actionsContainer) { action.href = redirectionURL; }
+                prestationCard.addEventListener("click", () => { window.location = redirectionURL; });
+            }
+        }
+        counter++;
     });
-}
-
-function showListingError(error) {
-    console.log(error);
 }
 
 function updatePageListingSelectionContainer() {

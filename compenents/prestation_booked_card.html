@@ -1,4 +1,4 @@
-<div onclick="window.location = 'prestation_details_page.html?booked=0'" class="prestation-card w-100 d-flex flex-row align-items-center gap-2 p-2" title="The prestation card of a booked/owned prestation">
+<div class="prestation-card w-100 d-flex flex-row align-items-center gap-2 p-2" title="The prestation card of a booked/owned prestation">
     <img src="assets/images/prestation_image.jpg" alt="A static image for the booked prestation" class="prestation-card-image">
     <div class="w-100 h-100 d-flex flex-column align-items-begin justify-content-center pe-none">
         <h2 class="prestation-card-title m-0">Prestation Title</h2>
@@ -7,7 +7,7 @@
         <h3 class="prestation-card-info-text m-0">Category</h3>
         <h3 id="prestation-card-status-info" class="prestation-card-info-text m-0">Status</h3>
     </div>
-    <div class="prestation-card-buttons w-auto h-75 d-flex flex-column justify-content-center gap-2">
+    <div id="actions-container" class="prestation-card-buttons w-auto h-75 d-flex flex-column justify-content-center gap-2">
         <a href="prestation_details_page.html" onclick="event.stopPropagation();" class="button" title="Show the details of the booked prestation">details</a>
     </div>
 </div>

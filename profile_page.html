@@ -14,9 +14,9 @@
                 <div class="d-flex flex-column flex-md-row gap-2 gap-sm-3">
                     <img class="profile-user-image" src="assets/images/user_image.jpg" alt="Your user profile picture">
                     <div class="w-100 d-flex flex-column">
-                        <h2 class="fw-bold" title="The profile name of a user">Profile Name</h2>
-                        <h4 title="The information if a user">Information (company name, etc)</h4>
-                        <h4 title="When the user joined StartApp">Joined a {joining date}</h4>
+                        <h2 id="profile-name" class="fw-bold" title="The profile name of a user">Profile Name</h2>
+                        <h4 id="information" title="The information if a user">Information</h4>
+                        <h4 id="joining-date" title="When the user joined StartApp">Joined at {joining date}</h4>
                     </div>
                 </div>
                 <div class="d-flex flex-column flex-md-row gap-2">
@@ -26,11 +26,7 @@
                     <a href="edit_profile_page.html" class="button" title="Edit the profile">edit</a>
                 </div>
                 <div id="links-container" class="w-100 d-flex flex-row gap-3 p-2 links-container scroll-section-no-scrollbar"></div>
-                <p title="The description of the user profile">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce euismod  eget quam eget tempus. Curabitur ultricies orci vel turpis accumsan, id  scelerisque diam eleifend. Nunc blandit fermentum volutpat. Nullam  bibendum ullamcorper lorem. Morbi facilisis nec arcu ut mollis. Nam id  volutpat lectus.<br />
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce euismod  eget quam eget tempus. Curabitur ultricies orci vel turpis accumsan, id  scelerisque diam eleifend. Nunc blandit fermentum volutpat. Nullam  bibendum ullamcorper lorem. Morbi facilisis nec arcu ut mollis. Nam id  volutpat lectus.<br />
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce euismod  eget quam eget tempus. Curabitur ultricies orci vel turpis accumsan, id  scelerisque diam eleifend. Nunc blandit fermentum volutpat. Nullam  bibendum ullamcorper lorem. Morbi facilisis nec arcu ut mollis. Nam id  volutpat lectus.
-                </p>
+                <p id="description" title="The description of the user profile"></p>
             </div>
             <div id="footer-container"></div>
         </main>

@@ -1,0 +1,105 @@
+{
+    "prestations": [
+        {
+            "name": "Prestation 1", "author": "Author 1",
+            "category": "Category 1", "stars": 2, "price": 50,
+            "description": "description...", "booked": false
+        },
+        {
+            "name": "Prestation 2", "author": "Author 2",
+            "category": "Category 2", "stars": 5, "price": 250,
+            "description": "description...", "booked": false
+        },
+        {
+            "name": "Prestation 3", "author": "Author 3",
+            "category": "Category 1", "stars": 1, "price": 20,
+            "description": "description...", "booked": true
+        },
+        {
+            "name": "Prestation 4", "author": "Author 4",
+            "category": "Category 3", "stars": 3, "price": 250,
+            "description": "description...", "booked": true
+        },
+        {
+            "name": "Prestation 5", "author": "Author 2",
+            "category": "Category 2", "stars": 4, "price": 550,
+            "description": "description...", "booked": false
+        },
+        {
+            "name": "Prestation 6", "author": "Author 2",
+            "category": "Category 4", "stars": 1, "price": 50,
+            "description": "description...", "booked": true
+        },
+        {
+            "name": "Prestation 7", "author": "Author 3",
+            "category": "Category 1", "stars": 4, "price": 35,
+            "description": "description...", "booked": true
+        },
+        {
+            "name": "Prestation 8", "author": "Author 6",
+            "category": "Category 3", "stars": 5, "price": 150,
+            "description": "description...", "booked": false
+        },
+        {
+            "name": "Prestation 9", "author": "Author 10",
+            "category": "Category 3", "stars": 2, "price": 560,
+            "description": "description...", "booked": true
+        },
+        {
+            "name": "Prestation 10", "author": "Author 4",
+            "category": "Category 1", "stars": 4, "price": 95,
+            "description": "description...", "booked": true
+        },
+        {
+            "name": "Prestation 11", "author": "Author 1",
+            "category": "Category 4", "stars": 5, "price": 50,
+            "description": "description...", "booked": true
+        },
+        {
+            "name": "Prestation 12", "author": "Author 5",
+            "category": "Category 2", "stars": 3, "price": 350,
+            "description": "description...", "booked": true
+        },
+        {
+            "name": "Prestation 13", "author": "Author 2",
+            "category": "Category 6", "stars": 1, "price": 550,
+            "description": "description...", "booked": true
+        },
+        {
+            "name": "Prestation 14", "author": "Author 5",
+            "category": "Category 3", "stars": 2, "price": 550,
+            "description": "description...", "booked": true
+        },
+        {
+            "name": "Prestation 15", "author": "Author 8",
+            "category": "Category 5", "stars": 1, "price": 50,
+            "description": "description...", "booked": true
+        },
+        {
+            "name": "Prestation 16", "author": "Author 3",
+            "category": "Category 2", "stars": 3, "price": 150,
+            "description": "description...", "booked": true
+        },
+        {
+            "name": "Prestation 17", "author": "Author 5",
+            "category": "Category 3", "stars": 5, "price": 250,
+            "description": "description...", "booked": true
+        }
+    ],
+
+    "users": {
+        "1": {
+            "infos": {
+                "username": "Emilie",
+                "displayedInformation": "+1.5M on ROI this year",
+                "description": "Hi there ! I'm a young French business super woman that know a lot about managing your company. I have created 5 compagnies at this day, none of them has sunken under the dangerous teeths of the sharks out there. I joined this new journey to share my knowledge to everyone, on this infinite sea, filled by various kind of fishes.",
+                "joiningDate": "1 feb. 2007"
+            },
+            "widgetLinks": [
+                {"name": "Github", "username": "Linus Torvalds", "link": "https://github.com/torvalds/"},
+                {"name": "LinkedIn", "username": "Emilie Queenster", "link": "https://fr.linkedin.com/"},
+                {"name": "Facebook", "username": "Emilie Queenster", "link": "https://www.facebook.com/"}
+            ]
+        }
+    }
+}
