@@ -3,6 +3,6 @@ export function getURLArgument(targetedArgument) {
     let targetedParam = URLParameters.get(targetedArgument);
     let output = false
 
-    if (targetedParam) { output = targetedParam > 0; }
+    if (targetedParam) { output = targetedParam; }
     return output
 }

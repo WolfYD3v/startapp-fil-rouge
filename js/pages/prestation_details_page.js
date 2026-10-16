@@ -37,10 +37,9 @@ bookCancelBtn.addEventListener("click", () => {
 // Definition of functions
 async function init() {
     let prestationId = Number(getURLArgument("prestation_id")) - 1;
-    console.log(prestationId)
-    let data = await DB_MANAGER_INSTANCE.getData("prestations")
-    data = data[prestationId];
-    console.log(data)
+    let allPrestations = await DB_MANAGER_INSTANCE.getData("prestations")
+    let data = allPrestations[prestationId];
+    
     prestationBooked = data.booked;
     prestationName.innerText = data.name;
     prestationAuthor.innerText = data.author;

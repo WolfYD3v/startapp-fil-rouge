@@ -49,7 +49,7 @@ function listBookedPrestations(data) {
     let sliceIdxEnd = MAX_PRESTATION_CARDS_PER_PAGE * currentPageIdx;
     data = data.slice(sliceIdxStart, sliceIdxEnd)
 
-    let counter = 1;
+    let counter = 1 + ((currentPageIdx - 1) * MAX_PRESTATION_CARDS_PER_PAGE);
     prestationsContainer.innerHTML = "";
     data.forEach(async function (prestationEntry) {
         if (!prestationEntry.booked) {
@@ -61,6 +61,10 @@ function listBookedPrestations(data) {
                 let actionsContainer = prestationCard.querySelector("#actions-container").children;
                 for (let action of actionsContainer) { action.href = redirectionURL; }
                 prestationCard.addEventListener("click", () => { window.location = redirectionURL; });
+                
+                prestationCard.querySelector("#prestation-title").innerText = prestationEntry.name;
+                prestationCard.querySelector("#prestation-author").innerText = prestationEntry.author;
+                prestationCard.querySelector("#prestation-category").innerText = prestationEntry.category;
             }
         }
         counter++;
