@@ -39,24 +39,36 @@ nextPageBtn.addEventListener("click", () => {
 // Definition of functions
 async function getAvaiblePrestations() {
     let data = await DB_MANAGER_INSTANCE.getData("prestations");
-    listAvaiblePrestations(data);
+
+
+    avaiblePrestationsCount = 0;
+    let avaiblePrestationsData = [];
+    let avaiblePrestationsIndexes = [];
+    data.forEach((prestationEntry, index) => {
+        if (!prestationEntry.booked) {
+            avaiblePrestationsIndexes.push(index + 1);
+            avaiblePrestationsData.push(prestationEntry);
+            avaiblePrestationsCount++;
+        }
+    });
+
+    let idxStart = (currentPageIdx - 1) * MAX_PRESTATION_CARDS_PER_PAGE;
+    let idxEnd = MAX_PRESTATION_CARDS_PER_PAGE * currentPageIdx;
+    avaiblePrestationsData = avaiblePrestationsData.slice(idxStart, idxEnd);
+    avaiblePrestationsIndexes = avaiblePrestationsIndexes.slice(idxStart, idxEnd);
+    listAvaiblePrestations(avaiblePrestationsData, avaiblePrestationsIndexes);
 }
 
-function listAvaiblePrestations(data) {
-    avaiblePrestationsCount = data.length;
-    let sliceIdxStart = (currentPageIdx - 1) * MAX_PRESTATION_CARDS_PER_PAGE;
-    let sliceIdxEnd = MAX_PRESTATION_CARDS_PER_PAGE * currentPageIdx;
-    data = data.slice(sliceIdxStart, sliceIdxEnd)
-
-    let counter = 1 + ((currentPageIdx - 1) * MAX_PRESTATION_CARDS_PER_PAGE);
+function listAvaiblePrestations(data, indexes) {
     prestationsContainer.innerHTML = "";
-    data.forEach(async function (prestationEntry) {
-        if (prestationEntry.booked) {
+    data.forEach(async function (prestationEntry, index) {
+        if (!prestationEntry.booked) {
             await loadHTML("compenents/prestation_card.html", "prestations-container");
     
             let prestationCard = prestationsContainer.lastElementChild;
             if (prestationCard) {
-                let redirectionURL = `prestation_details_page.html?prestation_id=${counter}`;
+                let idx = indexes[index];
+                let redirectionURL = `prestation_details_page.html?prestation_id=${idx}`;
                 let actionsContainer = prestationCard.querySelector("#actions-container").children;
                 for (let action of actionsContainer) { action.href = redirectionURL; }
                 prestationCard.addEventListener("click", () => { window.location = redirectionURL; });
@@ -67,8 +79,8 @@ function listAvaiblePrestations(data) {
                 prestationCard.querySelector("#prestation-card-price-info").innerText = `Price: ${prestationEntry.price}$`;
             }
         }
-        counter++;
     });
+    updatePageListingSelectionContainer();
 }
 
 function updatePageListingSelectionContainer() {

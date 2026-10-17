@@ -38,26 +38,37 @@ nextPageBtn.addEventListener("click", () => {
 
 
 // Definition of functions
-async function getBookedPrestations() {   
+async function getBookedPrestations() {
     let data = await DB_MANAGER_INSTANCE.getData("prestations");
-    listBookedPrestations(data);
+
+    bookedPrestationsCount = 0;
+    let bookedPrestationsData = [];
+    let bookedPrestationsIndexes = [];
+    data.forEach((prestationEntry, index) => {
+        if (prestationEntry.booked) {
+            bookedPrestationsIndexes.push(index + 1);
+            bookedPrestationsData.push(prestationEntry);
+            bookedPrestationsCount++;
+        }
+    });
+
+    let idxStart = (currentPageIdx - 1) * MAX_PRESTATION_CARDS_PER_PAGE;
+    let idxEnd = MAX_PRESTATION_CARDS_PER_PAGE * currentPageIdx;
+    bookedPrestationsData = bookedPrestationsData.slice(idxStart, idxEnd);
+    bookedPrestationsIndexes = bookedPrestationsIndexes.slice(idxStart, idxEnd);
+    listBookedPrestations(bookedPrestationsData, bookedPrestationsIndexes);
 }
 
-function listBookedPrestations(data) {
-    bookedPrestationsCount = data.length;
-    let sliceIdxStart = (currentPageIdx - 1) * MAX_PRESTATION_CARDS_PER_PAGE;
-    let sliceIdxEnd = MAX_PRESTATION_CARDS_PER_PAGE * currentPageIdx;
-    data = data.slice(sliceIdxStart, sliceIdxEnd)
-
-    let counter = 1 + ((currentPageIdx - 1) * MAX_PRESTATION_CARDS_PER_PAGE);
+function listBookedPrestations(data, indexes) {
     prestationsContainer.innerHTML = "";
-    data.forEach(async function (prestationEntry) {
-        if (!prestationEntry.booked) {
+    data.forEach(async function (prestationEntry, index) {
+        if (prestationEntry.booked) {
             await loadHTML("compenents/prestation_booked_card.html", "prestations-container");
         
             let prestationCard = prestationsContainer.lastElementChild;
             if (prestationCard) {
-                let redirectionURL = `prestation_details_page.html?prestation_id=${counter}`;
+                let idx = indexes[index];
+                let redirectionURL = `prestation_details_page.html?prestation_id=${idx}`;
                 let actionsContainer = prestationCard.querySelector("#actions-container").children;
                 for (let action of actionsContainer) { action.href = redirectionURL; }
                 prestationCard.addEventListener("click", () => { window.location = redirectionURL; });
@@ -67,8 +78,8 @@ function listBookedPrestations(data) {
                 prestationCard.querySelector("#prestation-category").innerText = prestationEntry.category;
             }
         }
-        counter++;
     });
+    updatePageListingSelectionContainer();
 }
 
 function updatePageListingSelectionContainer() {
