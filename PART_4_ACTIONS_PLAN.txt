@@ -1,26 +1,26 @@
 Mettre en place le JS sur le site:
 
 Fonctionnalités à ajouer:
-    - Un menu burger fonctionnel [ DONE ]
-    - Un slider (carrousel de contenu) [ DONE ]
-    - Un formulaire dynamique (interaction, message de confirmation ou vérification simple) [ DONE ]
+    - Un menu burger fonctionnel                                                                                        [ DONE ]
+    - Un slider (carrousel de contenu)                                                                                  [ DONE ]
+    - Un formulaire dynamique (interaction, message de confirmation ou vérification simple)                             [ DONE ]
 
 Objectifs:
-    - Implémenter les fonctionnalités dynamiques en JavaScript [ DONE ]
-    - Enregistrer une vidéo Loom (formule gratuite) de 5 minutes maximum montrant le fonctionnement des fonctionnalités
-    - Déployer votre projet sur GitHub Pages [ DONE ]
-    - Pousser l’ensemble du code sur GitHub
+    - Implémenter les fonctionnalités dynamiques en JavaScript                                                          [ DONE ]
+    - Enregistrer une vidéo Loom (formule gratuite) de 5 minutes maximum montrant le fonctionnement des fonctionnalités [ DONE ]
+    - Déployer votre projet sur GitHub Pages                                                                            [ DONE ]
+    - Pousser l’ensemble du code sur GitHub                                                                             [ DONE ]
 
 
 wolfyd3v@wolfyd3v-Lenovo-G70-70:~/Documents/Formation-Pro/startapp-fil-rouge$ ls -a | grep profile
-edit_profile_page.html [ DONE ]
-profile_disponibility_agenda.html [ DONE ]
-profile_page.html [ DONE ]
+edit_profile_page.html                                                                                                  [ DONE ]
+profile_disponibility_agenda.html                                                                                       [ DONE ]
+profile_page.html                                                                                                       [ DONE ]
 
 
 
 Rendu attendu:
 Un fichier avec 3 liens dedans:
-    - Le lien vers votre dépôt GitHub
-    - Le lien vers votre vidéo Loom
-    - Le lien vers votre site déployé via GitHub Pages
+    - Le lien vers votre dépôt GitHub                                                                                   [ DONE ]
+    - Le lien vers votre vidéo Loom                                                                                     [ DONE ]
+    - Le lien vers votre site déployé via GitHub Pages                                                                  [ DONE ]
