@@ -11,7 +11,7 @@
             <div class="d-flex flex-column w-100 h-auto p-sm-5 gap-4 justify-content-center">
                 <div class="d-flex flex-column w-100 h-auto p-3 p-sm-5 gap-4 justify-content-center align-items-center">
                     <h2 class="text-center fw-bold w-100">Welcome back !</h2>
-                    <form id="login-form" class="d-flex flex-column w-100 gap-3" action="profile_page.html" method="get" novalidate>
+                    <form id="login-form" class="d-flex flex-column w-100 gap-3" novalidate>
                         <fieldset class="d-flex flex-column w-100 gap-2">
                             <label for="username-text"></label>
                             <input id="username-text" name="username-text" type="text" placeholder="Username" required >
@@ -34,8 +34,8 @@
         
         <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
         <script type="module">
-            import { initForm } from "./js/pages/form_script.js"
-            initForm("login-form");
+            import { initForm } from "./js/pages/form_script.js";
+            initForm("login-form", "profile_page.html");
         </script>
     </body>
 </html>

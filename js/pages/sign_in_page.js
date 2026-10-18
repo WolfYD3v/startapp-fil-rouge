@@ -35,9 +35,7 @@ form.addEventListener("submit", (event) => {
         }
     });
 
-    if (formValid) {
-        event.target.submit();
-    }
+    if (formValid) { window.location.href = "verify_account_page.html"; }
     else {
         let firstErrorElement = document.querySelector(`label[for = ${errors[0].previousElementSibling.getAttribute("for")}]`);
         firstErrorElement.scrollIntoView({behavior: 'smooth'});

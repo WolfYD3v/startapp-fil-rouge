@@ -57,9 +57,9 @@ function toggleFormSection(formSectionToggleButton, formSection, toggled) {
 }
 
 // Start the script by calling functons
-initForm("form");
+initForm("form", "prestation_details_page.html?prestation_id=1");
 
-setTimeout( () => {
+setTimeout(() => {
     toggleFormSection(formSection1ToggleButton, formSection1, formSection1Toggled);
     toggleFormSection(formSection2ToggleButton, formSection2, formSection2Toggled);
     toggleFormSection(formSection3ToggleButton, formSection3, formSection3Toggled);

@@ -27,9 +27,7 @@ reSendCodeBtn.addEventListener("click", () => {
 });
 verifyAccountForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    if (verityCodeInputed()) {
-        event.target.submit();
-    }
+    if (verityCodeInputed()) { window.location.href = "profile_page.html"; }
 });
 allVerifyAccountAsks.forEach(verifyAccountAsk => {
     verifyAccountAsk.addEventListener("input", () => {

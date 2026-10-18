@@ -159,6 +159,6 @@ function validateNewProfileLinkWidgetCreation() {
 }
 
 // Start the script by calling functons
-initForm("edit-profile-form");
+initForm("edit-profile-form", "profile_page.html");
 editProfileLinkWidgetPopup.style.display = "none";
 await initPageInfos();

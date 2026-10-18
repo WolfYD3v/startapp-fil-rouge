@@ -14,16 +14,15 @@ let hasBeenInit = false;
 
 
 // Definition of functions
-export function initForm(formNodeId) {
+export function initForm(formNodeId, submitRedirectionURL) {
     form = document.getElementById(formNodeId);
     formFields = document.querySelectorAll("input[required], textarea[required]");
-    //console.log(formFields);
-    initListeners();
+    initListeners(submitRedirectionURL);
 
     hasBeenInit = true;
 }
 
-function initListeners() {
+function initListeners(submitRedirectionURL) {
     // Listener for the submit event of the form
     form.addEventListener("submit", (event) => {
         event.preventDefault();
@@ -38,9 +37,7 @@ function initListeners() {
             }
         });
 
-        if (formValid) {
-            event.target.submit();
-        }
+        if (formValid) { window.location.href = submitRedirectionURL; }
         else {
             let firstErrorElement = document.querySelector(`label[for = ${errors[0].previousElementSibling.getAttribute("for")}]`);
             firstErrorElement.scrollIntoView({behavior: 'smooth'});

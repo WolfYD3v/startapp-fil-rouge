@@ -25,10 +25,7 @@ submitButton.addEventListener("click", (event) => {
     event.preventDefault();
     if (prestationTookPlace) { alert("Review Submited !"); }
     else { alert("We are sorry to hear that, we will do our best to prevent this kind of behavoir happend again on our platform"); }
-    ratingForm.submit();
-});
-ratingForm.addEventListener("submit", (event) => {
-    event.target.submit();
+    window.location.href = "prestation_details_page.html?prestation_id=1";
 });
 
 
